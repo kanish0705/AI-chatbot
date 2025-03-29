@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aquaponics Resource Management</title>
+    <title>Aquaponics - Sustainable Farming</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
@@ -14,14 +14,15 @@
 </head>
 <body>
 
-    <!-- Header -->
+    <!-- Navigation Bar -->
     <header>
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
+                <li><a href="#about">About Aquaponics</a></li>
                 <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#setup">Setup Guide</a></li>
                 <li><a href="#benefits">Benefits</a></li>
-                <li><a href="#setup-guide">Setup Guide</a></li>
                 <li><a href="#faq">FAQs</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -30,69 +31,73 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1>Welcome to Aquaponics Resource Management</h1>
-        <p>Grow fresh vegetables and raise fish sustainably in a **self-sufficient ecosystem**.</p>
-        <button onclick="alert('Explore how to set up Aquaponics!')">Get Started</button>
+        <h1>Welcome to Aquaponics</h1>
+        <p>Grow fresh vegetables and raise fish in a sustainable ecosystem.</p>
+        <button onclick="location.href='chatbot.html'">Ask Our Chatbot</button>
+    </section>
+
+    <!-- About Aquaponics -->
+    <section id="about" class="content-section" data-aos="fade-up">
+        <h2>What is Aquaponics?</h2>
+        <p>Aquaponics is a **self-sustaining farming method** that combines **aquaculture (raising fish)** with **hydroponics (growing plants without soil)**. This system creates a natural cycle where fish waste provides nutrients for plants, and plants clean the water for the fish.</p>
     </section>
 
     <!-- How It Works -->
     <section id="how-it-works" class="content-section" data-aos="fade-up">
         <h2>How Aquaponics Works</h2>
-        <p>Aquaponics is a **closed-loop system** where plants and fish thrive together.</p>
+        <ul>
+            <li>🐟 **Fish produce waste** → Turns into nutrients for plants.</li>
+            <li>🌱 **Plants absorb nutrients** → Clean the water.</li>
+            <li>💧 **Water is recycled** → Creating a **zero-waste system**.</li>
+        </ul>
         <img src="aquaponics-diagram.jpg" alt="Aquaponics System">
-        <ul>
-            <li><strong>Fish Waste →</strong> Provides nutrients for plants.</li>
-            <li><strong>Plants →</strong> Filter and clean water for fish.</li>
-            <li><strong>Recycling →</strong> Minimal water usage & sustainable farming.</li>
-        </ul>
-    </section>
-
-    <!-- Benefits of Aquaponics -->
-    <section id="benefits" class="content-section" data-aos="fade-up">
-        <h2>Benefits of Aquaponics</h2>
-        <ul>
-            <li>✅ **Water Efficient** – Uses 90% less water than traditional farming.</li>
-            <li>✅ **Chemical-Free** – No need for fertilizers or pesticides.</li>
-            <li>✅ **High Yield** – Grow vegetables 2x faster than soil farming.</li>
-            <li>✅ **Sustainable** – Self-sustaining ecosystem with **minimal waste**.</li>
-        </ul>
     </section>
 
     <!-- Setup Guide -->
-    <section id="setup-guide" class="content-section" data-aos="fade-up">
+    <section id="setup" class="content-section" data-aos="fade-up">
         <h2>How to Set Up an Aquaponics System</h2>
-        <p>Follow these **simple steps** to create your own aquaponics system:</p>
         <ol>
-            <li><strong>Choose a Location:</strong> Place your system in a **sunlit** area.</li>
-            <li><strong>Setup a Fish Tank:</strong> Use a **200-500L tank** for fish.</li>
-            <li><strong>Add a Grow Bed:</strong> Place plants **above the fish tank**.</li>
-            <li><strong>Install a Water Pump:</strong> **Circulates** water between fish & plants.</li>
-            <li><strong>Select Fish & Plants:</strong> Tilapia, catfish, lettuce, and basil work best.</li>
-            <li><strong>Monitor the System:</strong> Check **pH, ammonia & nitrate** levels regularly.</li>
+            <li><strong>Choose a Location:</strong> Ensure **adequate sunlight**.</li>
+            <li><strong>Fish Tank:</strong> Use a **sturdy, food-safe container**.</li>
+            <li><strong>Grow Bed:</strong> Place **plants above the fish tank**.</li>
+            <li><strong>Install a Water Pump:</strong> To circulate nutrients.</li>
+            <li><strong>Select Fish & Plants:</strong> Tilapia, basil, lettuce, and tomatoes work well.</li>
+            <li><strong>Monitor Water Quality:</strong> Maintain **pH, nitrate, and oxygen levels**.</li>
         </ol>
+    </section>
+
+    <!-- Benefits -->
+    <section id="benefits" class="content-section" data-aos="fade-up">
+        <h2>Why Choose Aquaponics?</h2>
+        <ul>
+            <li>🚰 Uses **90% less water** than soil farming.</li>
+            <li>🌿 No need for **fertilizers or pesticides**.</li>
+            <li>⚡ Faster plant growth and **higher yields**.</li>
+            <li>🌍 **Eco-friendly** & reduces carbon footprint.</li>
+        </ul>
     </section>
 
     <!-- FAQs -->
     <section id="faq" class="content-section" data-aos="fade-up">
         <h2>Frequently Asked Questions</h2>
         <div class="faq-item">
-            <h3>❓ What fish can I use in aquaponics?</h3>
+            <h3>❓ What fish can be used?</h3>
             <p>Tilapia, catfish, koi, and goldfish are commonly used.</p>
         </div>
         <div class="faq-item">
             <h3>❓ Do I need to change the water?</h3>
-            <p>No, the system naturally recycles water. Just **top up** when needed.</p>
+            <p>No, the system **naturally recycles water**.</p>
         </div>
         <div class="faq-item">
             <h3>❓ Can I use any plants?</h3>
-            <p>Leafy greens like lettuce, spinach, and herbs grow best.</p>
+            <p>Leafy greens like **lettuce, basil, and spinach** are best.</p>
         </div>
     </section>
 
     <!-- Contact -->
     <section id="contact" class="content-section">
         <h2>Contact Us</h2>
-        <p>For more details, reach out at: <a href="mailto:aquaponics@example.com">aquaponics@example.com</a></p>
+        <p>Email: <a href="mailto:aquaponics@example.com">aquaponics@example.com</a></p>
     </section>
 
     <!-- Footer -->
