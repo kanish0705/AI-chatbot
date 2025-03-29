@@ -5,17 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aquaponics Resource Management</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.botpress.cloud/webchat/v2.1/inject.js"></script>
-    <script src="https://mediafiles.botpress.cloud/47d4a0b8-d010-4c7f-9902-0957cc4dfb19/webchat/v2.1/config.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             AOS.init();
         });
-
-        function openChatbot() {
-            window.botpressWebChat.show();
-        }
     </script>
 </head>
 <body>
@@ -25,10 +19,11 @@
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">How It Works</a></li>
-                <li><a href="#">Benefits</a></li>
-                <li><a href="#">Setup Guide</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#setup-guide">Setup Guide</a></li>
+                <li><a href="#faq">FAQs</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -36,41 +31,74 @@
     <!-- Hero Section -->
     <section class="hero">
         <h1>Welcome to Aquaponics Resource Management</h1>
-        <p>A smart way to grow plants and raise fish in a sustainable ecosystem.</p>
+        <p>Grow fresh vegetables and raise fish sustainably in a **self-sufficient ecosystem**.</p>
         <button onclick="alert('Explore how to set up Aquaponics!')">Get Started</button>
     </section>
 
-    <!-- Aquaponics Information -->
-    <section class="content-section" data-aos="fade-up">
-        <img src="pic2.png" alt="Aquaponics System" class="image-placeholder">
-        <h2>What is Aquaponics?</h2>
-        <p>Aquaponics is a combination of aquaculture (raising fish) and hydroponics (growing plants without soil). It is a sustainable and eco-friendly method for food production.</p>
+    <!-- How It Works -->
+    <section id="how-it-works" class="content-section" data-aos="fade-up">
+        <h2>How Aquaponics Works</h2>
+        <p>Aquaponics is a **closed-loop system** where plants and fish thrive together.</p>
+        <img src="aquaponics-diagram.jpg" alt="Aquaponics System">
         <ul>
-            <li><strong>Water Recycling:</strong> The fish provide nutrients for plants, and plants clean the water for fish.</li>
-            <li><strong>Minimal Waste:</strong> Reduces water usage by up to 90% compared to traditional farming.</li>
-            <li><strong>Organic Growth:</strong> No need for chemical fertilizers or pesticides.</li>
+            <li><strong>Fish Waste →</strong> Provides nutrients for plants.</li>
+            <li><strong>Plants →</strong> Filter and clean water for fish.</li>
+            <li><strong>Recycling →</strong> Minimal water usage & sustainable farming.</li>
         </ul>
-        <p><strong>Want to set up your own system?</strong> Follow our step-by-step guide!</p>
     </section>
 
-    <!-- Chatbot Container -->
-    <section class="chatbot-container">
-        <h2>Ask Our AI Chatbot</h2>
-        <p>Need help setting up your aquaponics system? Ask our AI-powered assistant.</p>
-        <div class="chatbox">
-            <div id="chat-messages"></div>
-            <input type="text" id="user-input" placeholder="Type your question...">
-            <button id="send-button">Send</button>
+    <!-- Benefits of Aquaponics -->
+    <section id="benefits" class="content-section" data-aos="fade-up">
+        <h2>Benefits of Aquaponics</h2>
+        <ul>
+            <li>✅ **Water Efficient** – Uses 90% less water than traditional farming.</li>
+            <li>✅ **Chemical-Free** – No need for fertilizers or pesticides.</li>
+            <li>✅ **High Yield** – Grow vegetables 2x faster than soil farming.</li>
+            <li>✅ **Sustainable** – Self-sustaining ecosystem with **minimal waste**.</li>
+        </ul>
+    </section>
+
+    <!-- Setup Guide -->
+    <section id="setup-guide" class="content-section" data-aos="fade-up">
+        <h2>How to Set Up an Aquaponics System</h2>
+        <p>Follow these **simple steps** to create your own aquaponics system:</p>
+        <ol>
+            <li><strong>Choose a Location:</strong> Place your system in a **sunlit** area.</li>
+            <li><strong>Setup a Fish Tank:</strong> Use a **200-500L tank** for fish.</li>
+            <li><strong>Add a Grow Bed:</strong> Place plants **above the fish tank**.</li>
+            <li><strong>Install a Water Pump:</strong> **Circulates** water between fish & plants.</li>
+            <li><strong>Select Fish & Plants:</strong> Tilapia, catfish, lettuce, and basil work best.</li>
+            <li><strong>Monitor the System:</strong> Check **pH, ammonia & nitrate** levels regularly.</li>
+        </ol>
+    </section>
+
+    <!-- FAQs -->
+    <section id="faq" class="content-section" data-aos="fade-up">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h3>❓ What fish can I use in aquaponics?</h3>
+            <p>Tilapia, catfish, koi, and goldfish are commonly used.</p>
         </div>
+        <div class="faq-item">
+            <h3>❓ Do I need to change the water?</h3>
+            <p>No, the system naturally recycles water. Just **top up** when needed.</p>
+        </div>
+        <div class="faq-item">
+            <h3>❓ Can I use any plants?</h3>
+            <p>Leafy greens like lettuce, spinach, and herbs grow best.</p>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="content-section">
+        <h2>Contact Us</h2>
+        <p>For more details, reach out at: <a href="mailto:aquaponics@example.com">aquaponics@example.com</a></p>
     </section>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 Aquaponics Resource Management. All rights reserved.</p>
     </footer>
-
-    <script src="scripts.js"></script>
-    <script src="chatbot.js"></script>
 
 </body>
 </html>
