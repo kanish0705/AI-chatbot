@@ -1,109 +1,148 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aquaponics - Sustainable Farming</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            AOS.init();
-        });
-    </script>
+    <title>Aquaponics Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Chatbot Button */
+        .chatbot-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #4285F4;
+            color: white;
+            border: none;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .chatbot-btn:hover {
+            background: #3367D6;
+        }
+
+        /* Chatbot Popup */
+        .chat-popup {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 350px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .chat-header {
+            background: #4285F4;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .chat-content {
+            height: 400px;
+            overflow-y: auto;
+        }
+        .chat-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: red;
+            color: white;
+            border: none;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    </style>
 </head>
-<body>
-
-    <!-- Navigation Bar -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#about">About Aquaponics</a></li>
-                <li><a href="#how-it-works">How It Works</a></li>
-                <li><a href="#setup">Setup Guide</a></li>
-                <li><a href="#benefits">Benefits</a></li>
-                <li><a href="#faq">FAQs</a></li>
-                <li><a href="#contact">Contact</a></li>
+<body class="h-screen bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?aquaponics');">
+    <nav class="bg-green-900 bg-opacity-75 p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-white text-2xl font-bold">Aquaponics Guide</h1>
+            <ul class="flex space-x-6">
+                <li><a href="#home" class="text-white hover:text-green-300">Home</a></li>
+                <li><a href="#about" class="text-white hover:text-green-300">About</a></li>
+                <li><a href="#how-it-works" class="text-white hover:text-green-300">How It Works</a></li>
+                <li><a href="#benefits" class="text-white hover:text-green-300">Benefits</a></li>
+                <li><a href="#contact" class="text-white hover:text-green-300">Contact</a></li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Welcome to Aquaponics</h1>
-        <p>Grow fresh vegetables and raise fish in a sustainable ecosystem.</p>
-        <button onclick="location.href='chatbot.html'">Ask Our Chatbot</button>
+    <section id="home" class="h-[80vh] flex flex-col items-center justify-center text-center text-white px-4">
+        <h2 class="text-4xl font-bold mb-4">Welcome to the Future of Farming</h2>
+        <p class="text-xl mb-6">Learn how to create a sustainable ecosystem combining aquaculture and hydroponics!</p>
+        <a href="#about" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg">Get Started</a>
     </section>
 
-    <!-- About Aquaponics -->
-    <section id="about" class="content-section" data-aos="fade-up">
-        <h2>What is Aquaponics?</h2>
-        <p>Aquaponics is a **self-sustaining farming method** that combines **aquaculture (raising fish)** with **hydroponics (growing plants without soil)**. This system creates a natural cycle where fish waste provides nutrients for plants, and plants clean the water for the fish.</p>
+    <section id="about" class="p-8 bg-white text-gray-800">
+        <h2 class="text-3xl font-bold mb-4">What is Aquaponics?</h2>
+        <p class="text-lg">Aquaponics is a combination of aquaculture (raising fish) and hydroponics (growing plants without soil). The fish provide nutrients for the plants, and the plants help clean the water for the fish — a perfect, sustainable cycle.</p>
     </section>
 
-    <!-- How It Works -->
-    <section id="how-it-works" class="content-section" data-aos="fade-up">
-        <h2>How Aquaponics Works</h2>
-        <ul>
-            <li>🐟 **Fish produce waste** → Turns into nutrients for plants.</li>
-            <li>🌱 **Plants absorb nutrients** → Clean the water.</li>
-            <li>💧 **Water is recycled** → Creating a **zero-waste system**.</li>
-        </ul>
-        <img src="aquaponics-diagram.jpg" alt="Aquaponics System">
+    <section id="how-it-works" class="p-8 bg-green-100 text-gray-800">
+        <h2 class="text-3xl font-bold mb-4">How It Works</h2>
+        <p class="text-lg">Water from the fish tank is pumped to the plant beds. Beneficial bacteria convert fish waste into nutrients for the plants. The clean water is then cycled back to the fish tank. This system conserves water, requires no soil, and produces both plants and fish.</p>
     </section>
 
-    <!-- Setup Guide -->
-    <section id="setup" class="content-section" data-aos="fade-up">
-        <h2>How to Set Up an Aquaponics System</h2>
-        <ol>
-            <li><strong>Choose a Location:</strong> Ensure **adequate sunlight**.</li>
-            <li><strong>Fish Tank:</strong> Use a **sturdy, food-safe container**.</li>
-            <li><strong>Grow Bed:</strong> Place **plants above the fish tank**.</li>
-            <li><strong>Install a Water Pump:</strong> To circulate nutrients.</li>
-            <li><strong>Select Fish & Plants:</strong> Tilapia, basil, lettuce, and tomatoes work well.</li>
-            <li><strong>Monitor Water Quality:</strong> Maintain **pH, nitrate, and oxygen levels**.</li>
-        </ol>
-    </section>
-
-    <!-- Benefits -->
-    <section id="benefits" class="content-section" data-aos="fade-up">
-        <h2>Why Choose Aquaponics?</h2>
-        <ul>
-            <li>🚰 Uses **90% less water** than soil farming.</li>
-            <li>🌿 No need for **fertilizers or pesticides**.</li>
-            <li>⚡ Faster plant growth and **higher yields**.</li>
-            <li>🌍 **Eco-friendly** & reduces carbon footprint.</li>
+    <section id="benefits" class="p-8 bg-white text-gray-800">
+        <h2 class="text-3xl font-bold mb-4">Benefits of Aquaponics</h2>
+        <ul class="list-disc list-inside text-lg">
+            <li>Uses 90% less water than traditional farming</li>
+            <li>Produces organic vegetables and fresh fish</li>
+            <li>Requires less space and no soil</li>
+            <li>Promotes sustainable food production</li>
         </ul>
     </section>
 
-    <!-- FAQs -->
-    <section id="faq" class="content-section" data-aos="fade-up">
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-item">
-            <h3>❓ What fish can be used?</h3>
-            <p>Tilapia, catfish, koi, and goldfish are commonly used.</p>
-        </div>
-        <div class="faq-item">
-            <h3>❓ Do I need to change the water?</h3>
-            <p>No, the system **naturally recycles water**.</p>
-        </div>
-        <div class="faq-item">
-            <h3>❓ Can I use any plants?</h3>
-            <p>Leafy greens like **lettuce, basil, and spinach** are best.</p>
-        </div>
+    <section id="contact" class="p-8 bg-green-100 text-gray-800">
+        <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
+        <p class="text-lg">Have questions or want to start your own aquaponics system? Reach out to us!</p>
+        <form class="mt-4">
+            <input type="text" placeholder="Your Name" class="border p-2 rounded w-full mb-2">
+            <input type="email" placeholder="Your Email" class="border p-2 rounded w-full mb-2">
+            <textarea placeholder="Your Message" class="border p-2 rounded w-full mb-2"></textarea>
+            <button class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">Submit</button>
+        </form>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="content-section">
-        <h2>Contact Us</h2>
-        <p>Email: <a href="mailto:aquaponics@example.com">aquaponics@example.com</a></p>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Aquaponics Resource Management. All rights reserved.</p>
+    <footer class="bg-green-900 text-white p-4 text-center">
+        <p>&copy; 2025 Aquaponics Guide | All rights reserved.</p>
     </footer>
 
+    <!-- Chatbot Floating Button -->
+    <button class="chatbot-btn" onclick="toggleChat()">
+        💬
+    </button>
+
+    <!-- Chatbot Popup -->
+    <div id="chatPopup" class="chat-popup">
+        <div class="chat-header">
+            Aquaponics Chatbot
+            <button class="chat-close" onclick="toggleChat()">✖</button>
+        </div>
+        <div class="chat-content">
+            <iframe src="chatbot.html" width="100%" height="400px"></iframe>
+        </div>
+    </div>
+
+    <script>
+        function toggleChat() {
+            var chatPopup = document.getElementById("chatPopup");
+            chatPopup.style.display = (chatPopup.style.display === "flex") ? "none" : "flex";
+        }
+    </script>
 </body>
 </html>
