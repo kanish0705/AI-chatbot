@@ -131,23 +131,101 @@
         }
     </script>
 </head>
-<body>
-    <header>
-        <h1>Aquaponics Guide</h1>
-    </header>
-    <section id="section1" data-aos="fade-up">
-        <img src="pic2.png" alt="Aquaponics System" class="image-placeholder">
-        
-        <h2>Sustainable Aquaponics Farming</h2>
-        <p><strong>What is Aquaponics?</strong> A revolutionary farming system that combines aquaculture (fish farming) and hydroponics (soil-less plant growth).</p>
-        <p><strong>Self-Sustaining Ecosystem:</strong> Fish produce nutrient-rich waste, which fertilizes plants. In turn, plants purify the water for the fish.</p>
-        <ul>
-            <li><strong>Water Efficiency:</strong> Uses 90% less water than traditional farming.</li>
-            <li><strong>Organic Growth:</strong> No need for chemical fertilizers or pesticides.</li>
-            <li><strong>Year-Round Production:</strong> Grow fresh vegetables and fish sustainably.</li>
-        </ul>
-        <p><strong>Getting Started:</strong> Learn how to set up your own aquaponics system with simple materials and techniques.</p>
+<body class="bg-green-100 text-gray-800">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-green-900 p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-white text-2xl font-bold">Aquaponics Guide</h1>
+            <ul class="flex space-x-6">
+                <li><a href="#about" class="text-white hover:text-green-300">About</a></li>
+                <li><a href="#types" class="text-white hover:text-green-300">Types</a></li>
+                <li><a href="#setup" class="text-white hover:text-green-300">Setup</a></li>
+                <li><a href="#plants-fish" class="text-white hover:text-green-300">Plants & Fish</a></li>
+                <li><a href="#contact" class="text-white hover:text-green-300">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="h-[80vh] flex flex-col items-center justify-center text-center text-white bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?aquaponics');">
+        <h2 class="text-4xl font-bold mb-4">The Future of Sustainable Farming</h2>
+        <p class="text-xl mb-6">Grow plants and fish together in a self-sustaining ecosystem!</p>
+        <a href="#about" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg">Learn More</a>
     </section>
+
+    <!-- About Section -->
+    <section id="about" class="p-8 bg-white">
+        <h2 class="text-3xl font-bold mb-4">What is Aquaponics?</h2>
+        <p class="text-lg">Aquaponics is a combination of aquaculture (raising fish) and hydroponics (growing plants without soil). The fish provide nutrients for the plants, and the plants help clean the water for the fish — a perfect, sustainable cycle.</p>
+    </section>
+
+    <!-- Types of Aquaponics Systems -->
+    <section id="types" class="p-8 bg-green-100">
+        <h2 class="text-3xl font-bold mb-4">Types of Aquaponics Systems</h2>
+        <ul class="list-disc list-inside text-lg">
+            <li><strong>Media Bed System:</strong> Uses gravel or clay pebbles as a growing medium.</li>
+            <li><strong>Nutrient Film Technique (NFT):</strong> Water flows in shallow channels for plant roots.</li>
+            <li><strong>Deep Water Culture (DWC):</strong> Plants float on rafts in nutrient-rich water.</li>
+        </ul>
+    </section>
+
+    <!-- Setup Section -->
+    <section id="setup" class="p-8 bg-white">
+        <h2 class="text-3xl font-bold mb-4">How to Set Up Your Aquaponics System</h2>
+        <ol class="list-decimal list-inside text-lg">
+            <li>Choose a location (backyard, greenhouse, rooftop).</li>
+            <li>Set up a fish tank and fill it with dechlorinated water.</li>
+            <li>Install grow beds above or beside the tank.</li>
+            <li>Add pumps, pipes, and aeration systems.</li>
+            <li>Introduce bacteria to convert fish waste into nutrients.</li>
+            <li>Add fish and plants after 3-4 weeks of cycling.</li>
+        </ol>
+    </section>
+
+    <!-- Best Plants & Fish -->
+    <section id="plants-fish" class="p-8 bg-green-100">
+        <h2 class="text-3xl font-bold mb-4">Best Plants & Fish for Aquaponics</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+                <h3 class="text-2xl font-semibold mb-2">🌱 Best Plants</h3>
+                <ul class="list-disc list-inside text-lg">
+                    <li>Lettuce</li>
+                    <li>Spinach</li>
+                    <li>Mint</li>
+                    <li>Tomatoes</li>
+                    <li>Strawberries</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-2xl font-semibold mb-2">🐟 Best Fish</h3>
+                <ul class="list-disc list-inside text-lg">
+                    <li>Tilapia</li>
+                    <li>Catfish</li>
+                    <li>Trout</li>
+                    <li>Goldfish (for decorative systems)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="p-8 bg-white">
+        <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
+        <p class="text-lg">Have questions or want to start your own aquaponics system? Reach out to us!</p>
+        <form class="mt-4">
+            <input type="text" placeholder="Your Name" class="border p-2 rounded w-full mb-2">
+            <input type="email" placeholder="Your Email" class="border p-2 rounded w-full mb-2">
+            <textarea placeholder="Your Message" class="border p-2 rounded w-full mb-2"></textarea>
+            <button class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">Submit</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-green-900 text-white p-4 text-center">
+        <p>&copy; 2025 Aquaponics Guide | All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
 
