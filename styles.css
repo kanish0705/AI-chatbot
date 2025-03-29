@@ -1,25 +1,24 @@
-/* General Reset */
-body, h1, h2, p, ul {
+/* Reset */
+body, h1, h2, p, ul, ol {
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Global Styles */
 body {
-    font-family: 'Poppins', sans-serif;
+    background: #f0f9f4;
     color: #333;
-    background: linear-gradient(135deg, #c3e6cb, #f0fdf4);
     scroll-behavior: smooth;
 }
 
 /* Header */
 header {
-    background: rgba(0, 50, 0, 0.7);
-    padding: 15px 20px;
+    background: #2b6038;
+    padding: 15px;
     position: fixed;
     width: 100%;
     top: 0;
-    left: 0;
     z-index: 1000;
 }
 
@@ -36,136 +35,70 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #fff;
-    font-weight: 500;
+    font-weight: bold;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #90ee90;
+    color: #9cf29c;
 }
 
 /* Hero Section */
 .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
     text-align: center;
-    background: url('assets/images/aquaponics-bg.jpg') no-repeat center center/cover;
+    background: url('aquaponics-bg.jpg') no-repeat center center/cover;
     color: #fff;
-    animation: fadeIn 1.5s ease-in-out;
+    padding: 120px 20px;
 }
 
 .hero h1 {
     font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    max-width: 600px;
 }
 
 .hero button {
     padding: 15px 30px;
-    background: #228b22;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.hero button:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Content Section */
-.content-section {
-    padding: 40px;
-    margin: 20px auto;
-    max-width: 800px;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.content-section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-}
-
-.image-placeholder {
-    width: 85%;
-    max-height: 350px;
-    margin: 0 auto 15px auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: block;
-    object-fit: cover;
-}
-
-/* Chatbot Container */
-.chatbot-container {
-    padding: 50px 20px;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.9);
-    margin: 50px 0;
-    border-radius: 15px;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
-    animation: slideIn 1s ease-in-out;
-}
-
-.chatbox {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#chat-messages {
-    width: 80%;
-    height: 200px;
-    background: #f1f1f1;
-    border-radius: 10px;
-    padding: 10px;
-    overflow-y: scroll;
-    margin-bottom: 15px;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
-}
-
-#user-input {
-    padding: 10px;
-    width: 70%;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-#send-button {
-    padding: 10px 20px;
     background: #28a745;
     color: #fff;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: 0.3s;
 }
 
-#send-button:hover {
+.hero button:hover {
     background: #218838;
+}
+
+/* Content Sections */
+.content-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.content-section h2 {
+    margin-bottom: 15px;
+    color: #2b6038;
+}
+
+/* FAQ Section */
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.faq-item h3 {
+    color: #333;
+    cursor: pointer;
 }
 
 /* Footer */
 footer {
-    background: #333;
-    color: #fff;
+    background: #2b6038;
+    color: white;
     text-align: center;
     padding: 15px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    margin-top: 20px;
 }
