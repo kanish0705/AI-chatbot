@@ -1,64 +1,99 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
+/* styles.css */
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
 }
 
-/* Chatbot Button */
+/* Chatbot Floating Button */
 .chatbot-btn {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: #4285F4;
+    background-color: #22c55e; /* Green color */
     color: white;
     border: none;
-    width: 60px;
-    height: 60px;
+    padding: 12px 15px;
+    font-size: 20px;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     cursor: pointer;
-    transition: 0.3s;
-}
-.chatbot-btn:hover {
-    background: #3367D6;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-/* Chatbot Popup */
+.chatbot-btn:hover {
+    background-color: #15803d; /* Darker green */
+    transform: scale(1.1);
+}
+
+/* Chatbot Popup Box */
 .chat-popup {
     position: fixed;
     bottom: 80px;
     right: 20px;
-    width: 350px;
+    width: 320px;
     background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     display: none;
-    flex-direction: column;
     overflow: hidden;
 }
+
+/* Chatbot Header */
 .chat-header {
-    background: #4285F4;
+    background: #15803d;
     color: white;
-    padding: 10px;
-    text-align: center;
+    padding: 12px;
+    font-size: 18px;
     font-weight: bold;
-    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.chat-content {
-    height: 400px;
-    overflow-y: auto;
-}
+
+/* Chat Close Button */
 .chat-close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: red;
-    color: white;
+    background: none;
     border: none;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
+    color: white;
+    font-size: 16px;
     cursor: pointer;
+}
+
+/* Chat Content */
+.chat-content {
+    padding: 10px;
+}
+
+/* Input Fields Styling */
+input, textarea {
+    border: 2px solid #15803d;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #22c55e;
+}
+
+/* Button Styling */
+button {
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .chat-popup {
+        width: 90%;
+        right: 5%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
 }
