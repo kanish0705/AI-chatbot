@@ -20,40 +20,63 @@
             <li><a href="#plants">Plants</a></li>
             <li><a href="#fish">Fish</a></li>
             <li><a href="#how-to-build">How to Build</a></li>
-            <li><a href="#revenue">Make Revenue</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Main Sections -->
+    <!-- Main Content -->
     <section id="home">
         <h2>Welcome to Aquaponics Farming</h2>
-        <p>Aquaponics is a sustainable method of growing plants and fish together. It combines aquaculture (raising fish) with hydroponics (growing plants without soil) in a symbiotic environment.</p>
-        <img src="aquaponics.jpg" alt="Aquaponics System">
+        <p>Aquaponics is a method of combining aquaculture (raising fish) and hydroponics (growing plants without soil) in a symbiotic environment. This technique uses fish waste as a natural fertilizer for plants, while the plants help purify the water for the fish.</p>
     </section>
 
     <section id="plants">
         <h2>Best Plants for Aquaponics</h2>
-        <p>Leafy greens like lettuce, spinach, and herbs thrive in aquaponic systems. Fruiting plants like tomatoes and cucumbers also do well in nutrient-rich water.</p>
-        <img src="plants.jpg" alt="Aquaponic Plants">
+
+        <div class="plant">
+            <h3>Lettuce</h3>
+            <img src="lettuce.jpg" alt="Lettuce">
+            <p>Lettuce grows quickly in aquaponic systems and thrives in nutrient-rich water. It is one of the most popular plants for aquaponics due to its fast growth and high yield.</p>
+        </div>
+
+        <div class="plant">
+            <h3>Basil</h3>
+            <img src="basil.jpg" alt="Basil">
+            <p>Basil is an herb that does exceptionally well in aquaponic systems. It requires consistent water flow and is an excellent choice for beginners.</p>
+        </div>
+
+        <div class="plant">
+            <h3>Tomato</h3>
+            <img src="tomato.jpg" alt="Tomato">
+            <p>Tomatoes require more nutrients than leafy greens but grow well in aquaponic systems with adequate filtration and lighting.</p>
+        </div>
     </section>
 
     <section id="fish">
         <h2>Best Fish for Aquaponics</h2>
-        <p>Tilapia, catfish, and trout are commonly used in aquaponic systems. They provide nutrients for the plants while thriving in controlled water conditions.</p>
-        <img src="fish.jpg" alt="Aquaponic Fish">
+
+        <div class="fish">
+            <h3>Tilapia</h3>
+            <img src="tilapia.jpg" alt="Tilapia">
+            <p>Tilapia is one of the best fish for aquaponics due to its resilience, fast growth, and adaptability to various conditions.</p>
+        </div>
+
+        <div class="fish">
+            <h3>Catfish</h3>
+            <img src="catfish.jpg" alt="Catfish">
+            <p>Catfish are hardy fish that require little maintenance. They thrive in warm water and are commonly used in commercial aquaponic farms.</p>
+        </div>
+
+        <div class="fish">
+            <h3>Goldfish</h3>
+            <img src="goldfish.jpg" alt="Goldfish">
+            <p>Goldfish are often used in small-scale aquaponic systems. While they are not edible, they produce a lot of waste, which helps fertilize plants efficiently.</p>
+        </div>
     </section>
 
     <section id="how-to-build">
         <h2>How to Build an Aquaponics System</h2>
-        <p>Building an aquaponic system involves setting up a fish tank, grow beds, and water pumps to circulate nutrient-rich water between the fish and plants.</p>
-        <img src="setup.jpg" alt="Aquaponics Setup">
-    </section>
-
-    <section id="revenue">
-        <h2>How to Make Revenue from Aquaponics</h2>
-        <p>By selling fresh organic produce and fish, aquaponic farmers can earn sustainable income. Restaurants, organic food markets, and direct consumers are great markets.</p>
-        <img src="revenue.jpg" alt="Aquaponics Revenue">
+        <p>Building an aquaponics system involves setting up a fish tank, grow beds, a water pump, and a filtration system. The cycle begins when fish produce waste, which gets converted into nutrients for plants through beneficial bacteria. The plants absorb these nutrients, and in turn, clean the water for the fish.</p>
     </section>
 
     <section id="contact">
@@ -62,13 +85,14 @@
     </section>
 
     <!-- Chatbot Floating Button -->
-    <button id="chatbot-button">
-        <img src="chat-icon.png" alt="Chatbot">
-    </button>
+    <button id="chatbot-button">Chat</button>
 
     <!-- Chatbot Popup -->
     <div id="chatbot-container">
-        <div id="chatbox-header">Aquaponics Chatbot</div>
+        <div id="chatbox-header">
+            <span>Aquaponics Chatbot</span>
+            <button id="close-chatbot">X</button>
+        </div>
         <div id="chat-messages"></div>
         <div id="chat-input">
             <input type="text" id="user-input" placeholder="Ask something...">
