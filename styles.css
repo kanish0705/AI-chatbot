@@ -3,13 +3,14 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
     color: #333;
 }
 
 /* 🌱 Header */
 header {
-    background: darkgreen;
+    background: rgba(0, 100, 0, 0.8);
     color: white;
     text-align: center;
     padding: 20px;
@@ -37,7 +38,7 @@ nav ul li a {
 section {
     padding: 40px;
     margin: 20px;
-    background: white;
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
 }
 
@@ -54,7 +55,7 @@ section {
 }
 
 .grid-item img {
-    width: 180px; /* Small-Medium Size */
+    width: 150px;
     height: auto;
     border-radius: 10px;
     display: block;
@@ -73,4 +74,28 @@ section {
     cursor: pointer;
     font-size: 16px;
     border-radius: 8px;
+}
+
+/* 🗨️ Chatbox */
+#chatbox {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background: white;
+    width: 250px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+#chat-input {
+    width: 80%;
+    padding: 5px;
+}
+
+#chat-messages {
+    max-height: 150px;
+    overflow-y: auto;
+    margin-top: 10px;
 }
