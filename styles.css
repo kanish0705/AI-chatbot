@@ -1,34 +1,26 @@
-/* 🌿 Global Styles */
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: url('img/background.jpg') no-repeat center center fixed;
+    background: url('images/background.jpg') no-repeat center center fixed;
     background-size: cover;
+}
+
+/* Header */
+header {
+    background-color: rgba(34, 139, 34, 0.8);
     color: white;
+    padding: 15px;
     text-align: center;
+    font-size: 24px;
 }
 
-/* 🏡 Home Section */
-#home {
-    text-align: center;
-    padding: 100px 20px;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-#home .content {
-    max-width: 600px;
-    margin: auto;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-/* 🌱 Navigation Bar */
+/* Navigation */
 nav {
-    text-align: center;
+    background: rgba(0, 128, 0, 0.9);
     padding: 10px;
-    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
 }
 
 nav ul {
@@ -38,7 +30,7 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 20px;
+    margin: 0 15px;
 }
 
 nav ul li a {
@@ -47,57 +39,59 @@ nav ul li a {
     font-weight: bold;
 }
 
-/* 📖 Guide Section */
-#guide {
+/* Sections */
+section {
+    padding: 40px;
     text-align: center;
-    padding: 50px 20px;
+    color: white;
 }
 
+/* Grid Layout for Plants & Fish */
 .grid-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 20px;
 }
 
 .grid-item {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.9);
     padding: 15px;
-    margin: 10px;
-    border-radius: 10px;
-    max-width: 200px;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
 }
 
 .grid-item img {
     width: 100%;
-    border-radius: 10px;
+    height: auto;
+    border-radius: 5px;
 }
 
-/* 📞 Contact Section */
-#contact {
-    text-align: center;
-    padding: 50px 20px;
-    background: rgba(0, 0, 0, 0.6);
-}
-
-/* 🟢 Floating Chatbot Button */
+/* Chatbot Floating Button */
 #chatbot {
     position: fixed;
+    bottom: 20px;
     right: 20px;
-    bottom: 50px;
-    width: 60px;
-    height: 60px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     cursor: pointer;
 }
 
 #chatbot img {
-    width: 100%;
-    border-radius: 50%;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    width: 50px;
+    height: 50px;
 }
 
-/* 🌍 Footer */
+/* Footer */
 footer {
     text-align: center;
     padding: 10px;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
