@@ -1,4 +1,16 @@
 /* General Page Styling */
+/* Title Section */
+.title-section {
+    background: rgba(0, 90, 78, 0.8); /* Dark Green Transparent */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
