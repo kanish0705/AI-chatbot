@@ -1,64 +1,66 @@
-/* Reset default margin & padding */
-body, h1, h2, p, ul {
+/* Basic Reset */
+body, h1, h2, p, ul, li, a {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /* Body Styling */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #2d3e2f; /* Dark green text */
-    background: linear-gradient(135deg, #d9f2d9, #bde0bd); /* Light green gradient */
+    color: #333;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
     scroll-behavior: smooth;
 }
 
 /* Header Styling */
 header {
-    background: #1b5e20; /* Dark Green */
+    background: #333;
     color: #fff;
     padding: 20px;
     text-align: center;
-    width: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 /* Navigation Bar */
 .navbar {
-    display: flex;
-    justify-content: center;
-    background-color: #2e7d32; /* Dark Green */
+    background: #222;
     padding: 10px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .navbar ul {
-    list-style-type: none;
+    list-style: none;
     display: flex;
-    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
 }
 
 .navbar ul li {
-    display: inline-block;
+    margin: 0 15px;
 }
 
 .navbar ul li a {
     text-decoration: none;
-    background-color: #43a047; /* Green Button */
     color: white;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
-    padding: 12px 20px;
-    display: block;
-    border-radius: 8px;
-    transition: background 0.3s, transform 0.2s;
+    padding: 10px;
+    transition: color 0.3s, background 0.3s;
+    border-radius: 5px;
 }
 
 .navbar ul li a:hover {
-    background-color: #1b5e20; /* Darker Green on Hover */
-    transform: scale(1.1);
+    color: #00bcd4;
+    background: rgba(255, 255, 255, 0.1);
 }
 
 /* Section Styling */
@@ -68,13 +70,37 @@ section {
     max-width: 800px;
     background: #fff;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    animation: fadeIn 1s ease-in;
+    position: relative;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
+/* Hover Effect for Sections */
 section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Floating Chatbot Button */
+#chatbot-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.2s;
+}
+
+#chatbot-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
 }
 
 /* Image Styling */
@@ -86,27 +112,6 @@ section:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: block;
     object-fit: cover;
-}
-
-/* Floating Chatbot Button */
-#chatbot-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #43a047; /* Green */
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    font-size: 16px;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, transform 0.2s;
-}
-
-#chatbot-button:hover {
-    background-color: #1b5e20; /* Dark Green */
-    transform: scale(1.1);
 }
 
 /* AOS Animations */
@@ -121,34 +126,23 @@ section:hover {
     transform: translateY(0);
 }
 
-/* Navbar styling */
-.navbar {
-    display: flex;
-    justify-content: center;
-    background: #444;
-    padding: 10px 0;
-}
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+    }
 
-.navbar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
+    .navbar ul li {
+        margin: 10px 0;
+    }
 
-.navbar ul li {
-    margin: 0 15px;
-}
+    section {
+        padding: 20px;
+        margin: 15px;
+    }
 
-.navbar ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    transition: color 0.3s;
+    #chatbot-button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
 }
-
-.navbar ul li a:hover {
-    color: #00bcd4;
-}
-
