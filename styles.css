@@ -1,158 +1,125 @@
 /* General Reset */
-body, h1, h2, p, ul, ol {
+body, h1, h2, p, ul {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
-/* Body Styling */
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
-    scroll-behavior: smooth;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
     color: #333;
 }
 
-/* Navigation Bar */
-nav {
-    background: #00796b;
+/* Navigation */
+.navbar {
+    background: #2c3e50;
     color: white;
     padding: 15px;
     text-align: center;
     position: fixed;
-    top: 0;
     width: 100%;
-    z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    top: 0;
+    z-index: 100;
 }
 
-nav ul {
+.navbar ul {
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    color: white;
+.navbar ul li a {
     text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease-in-out;
+    color: white;
+    transition: 0.3s;
 }
 
-nav ul li a:hover {
-    color: #ffcc80;
+.navbar ul li a:hover {
+    color: #1abc9c;
 }
 
-/* Home Section */
-.home {
+/* Hero Section */
+.hero {
     height: 90vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: url('https://source.unsplash.com/1600x900/?aquaponics') no-repeat center center/cover;
     color: white;
-    padding: 20px;
+    background: url('https://source.unsplash.com/1600x900/?aquaponics') no-repeat center/cover;
 }
 
-.home h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
+.hero h2 {
+    font-size: 2.5rem;
 }
 
-.home p {
-    font-size: 1.4rem;
-    margin-bottom: 20px;
-}
-
-.button {
+.hero .button {
+    background: #1abc9c;
+    color: white;
     padding: 10px 20px;
-    background: #ffcc80;
-    color: black;
-    border-radius: 8px;
+    border-radius: 5px;
     text-decoration: none;
-    font-size: 18px;
-    transition: 0.3s ease-in-out;
 }
 
-.button:hover {
-    background: #ffb74d;
+.hero .button:hover {
+    background: #16a085;
 }
 
 /* Sections */
 section {
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 30px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 50px;
+    text-align: center;
 }
 
-section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-}
-
-/* Contact Form */
-form {
+.grid {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    justify-content: space-around;
 }
 
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+.grid div {
+    width: 40%;
 }
 
-button {
-    padding: 10px;
-    background: #00796b;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-button:hover {
-    background: #004d40;
-}
-
-/* Chatbot Access Button */
-.chatbot-button {
+/* Chatbot */
+.chat-icon {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: #ff9800;
+    background: #1abc9c;
     color: white;
-    padding: 12px 20px;
-    border-radius: 50px;
-    font-size: 16px;
-    text-decoration: none;
-    transition: 0.3s ease-in-out;
-}
-
-.chatbot-button:hover {
-    background: #e65100;
-}
-
-/* Footer */
-footer {
-    text-align: center;
     padding: 15px;
-    background: #00796b;
-    color: white;
+    font-size: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.chat-icon:hover {
+    background: #16a085;
+}
+
+#chatbox-container {
     position: fixed;
-    bottom: 0;
-    width: 100%;
+    bottom: 80px;
+    right: 20px;
+    width: 350px;
+    height: 500px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: none;
+}
+
+#chatbox-container.active {
+    display: block;
+}
+
+.chatbox-header {
+    background: #1abc9c;
+    padding: 10px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
 }
