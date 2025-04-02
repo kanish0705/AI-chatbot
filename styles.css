@@ -60,7 +60,7 @@ section {
 /* Images */
 img {
     display: block;
-    width: 80%;
+    width: 70%;
     max-width: 400px;
     margin: 20px auto;
     border-radius: 10px;
@@ -69,8 +69,8 @@ img {
 /* Chatbot Floating Button */
 #chatbot-button {
     position: fixed;
-    bottom: 40px;  /* Positioned slightly lower */
-    right: 20px;
+    bottom: 50px;
+    right: 30px;
     width: 60px;
     height: 60px;
     background-color: #4285F4;
@@ -94,8 +94,8 @@ img {
 #chatbot-container {
     display: none;
     position: fixed;
-    bottom: 100px;
-    right: 20px;
+    bottom: 120px;
+    right: 30px;
     width: 320px;
     background: white;
     border-radius: 10px;
