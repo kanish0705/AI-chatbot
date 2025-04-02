@@ -5,45 +5,25 @@ body {
     padding: 0;
     background: url('img/background.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: #fff;
-}
-
-/* 🌿 Header */
-header {
-    text-align: center;
-    padding: 20px;
-    background: rgba(0, 128, 0, 0.8);
+    color: white;
 }
 
 /* 🌱 Navigation */
-nav ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-    background: rgba(0, 100, 0, 0.7);
-}
-
-nav ul li {
-    display: inline;
-    margin: 15px;
+nav {
+    background: rgba(0, 100, 0, 0.8);
+    padding: 10px;
 }
 
 nav ul li a {
     color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-/* 🏡 Home Section */
-#home {
-    text-align: center;
-    padding: 50px 20px;
 }
 
 /* 📖 Guide Section */
 #guide {
-    text-align: center;
+    background: rgba(0, 128, 0, 0.8); /* ✅ Added Green Background */
     padding: 50px 20px;
+    border-radius: 15px;
+    margin: 20px;
 }
 
 .grid-container {
@@ -75,19 +55,14 @@ nav ul li a {
     margin-right: 15px;
 }
 
-.info {
-    flex: 1;
-    text-align: left;
-}
-
 /* 📞 Contact Section */
 #contact {
+    background: rgba(0, 100, 0, 0.8); /* ✅ Dark Green Background */
     text-align: center;
     padding: 40px;
-    background: rgba(0, 128, 0, 0.8);
 }
 
-/* 🟢 Floating Chatbot */
+/* 🟢 Chatbot */
 #chatbot {
     position: fixed;
     bottom: 20px;
@@ -102,11 +77,4 @@ nav ul li a {
 #chatbot img {
     width: 50px;
     height: 50px;
-}
-
-/* 🌍 Footer */
-footer {
-    text-align: center;
-    padding: 15px;
-    background: rgba(0, 100, 0, 0.7);
 }
