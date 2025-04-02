@@ -1,131 +1,185 @@
-/* General Styling */
-body {
-    font-family: Arial, sans-serif;
+/* Basic Reset */
+body, h1, h2, p, ul, ol, form, input, textarea, button {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    text-align: center;
+    box-sizing: border-box;
 }
 
-/* Navbar */
-.navbar {
-    background: #007bff;
-    color: white;
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #d4fc79, #96e6a1);
+    scroll-behavior: smooth;
+}
+
+/* Header Styling */
+header {
+    background: rgba(0, 51, 25, 0.9);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+/* Navigation Bar */
+nav {
+    background: rgba(0, 51, 25, 0.95);
     padding: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+nav .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.navbar ul {
+nav h1 {
+    color: #fff;
+    font-size: 22px;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
     list-style: none;
-    padding: 0;
 }
 
-.navbar ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-.navbar ul li a {
-    color: white;
+nav ul li a {
     text-decoration: none;
-    font-weight: bold;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s ease;
 }
 
-/* Hero Section */
-.hero {
-    background: #0056b3;
-    color: white;
-    padding: 60px 20px;
+nav ul li a:hover {
+    color: #66ff66;
 }
 
-.button {
-    background: white;
-    color: #007bff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-/* Sections */
+/* Section Styling */
 section {
-    padding: 50px 20px;
-    background: white;
-    margin: 20px 0;
+    padding: 50px;
+    margin: 80px auto;
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Chatbot Styles */
-.chat-icon {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #007bff;
-    color: white;
-    width: 50px;
-    height: 50px;
-    font-size: 24px;
-    text-align: center;
-    line-height: 50px;
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+/* Hover Effect for Sections */
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.chat-icon:hover {
-    background: #0056b3;
-}
-
-/* Chatbox */
-#chatbox-container {
-    position: fixed;
-    bottom: 80px;
-    right: 20px;
-    width: 350px;
-    height: 500px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
-    display: none;
+/* Home Section */
+#home {
+    height: 80vh;
+    background: url('https://source.unsplash.com/1600x900/?aquaponics') no-repeat center center/cover;
+    display: flex;
     flex-direction: column;
-}
-
-#chatbox-container.active {
-    display: flex;
-}
-
-.chatbox-header {
-    background: #007bff;
-    color: white;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 10px;
-    font-size: 18px;
+    color: #fff;
+    padding: 20px;
+}
+
+#home h2 {
+    font-size: 2.5rem;
     font-weight: bold;
-    display: flex;
-    justify-content: space-between;
+    margin-bottom: 15px;
+    animation: slideIn 1s ease-in-out;
 }
 
-.chatbox-header button {
-    background: transparent;
+#home p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Button Styling */
+.button {
+    display: inline-block;
+    padding: 10px 18px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
     border: none;
-    color: white;
-    font-size: 18px;
+    border-radius: 8px;
+    text-align: center;
     cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
-iframe {
-    flex: 1;
-    width: 100%;
-    height: 100%;
-    border: none;
+.button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.3);
+}
+
+/* List Styling */
+ul, ol {
+    padding-left: 20px;
+}
+
+ul li, ol li {
+    margin: 8px 0;
+}
+
+/* Grid Layout for Best Plants & Fish */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
 /* Footer */
 footer {
-    background: #007bff;
-    color: white;
-    padding: 10px;
-    margin-top: 20px;
+    background: #003319;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
