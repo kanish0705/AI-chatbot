@@ -3,229 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Resource Management</title>
-    <style>
-        /* Basic Reset */
-        body, h1, h2, p, ul {
-            margin: 0;
-            padding: 0;
-        }
+    <title>Aquaponics Guide</title>
 
-        /* Body styling */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #e0eafc, #cfdef3);
-            scroll-behavior: smooth;
-        }
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="styles.css">
 
-        /* Header styling */
-        header {
-            background: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            width: 100%;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            z-index: 10; /* Ensure the header stays on top */
-        }
-
-        /* Section styling */
-        section {
-            padding: 30px;
-            margin: 20px auto;
-            max-width: 800px;
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            animation: fadeIn 1s ease-in;
-            position: relative; /* Ensure sections are properly stacked */
-            transition: transform 0.3s, box-shadow 0.3s; /* Hover effects */
-        }
-
-        /* Hover effect for sections */
-        section:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-        }
-
-        /* Footer styling */
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 15px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            box-shadow: 0 -4px 8px rgba(0,0,0,0.2);
-            z-index: 10; /* Ensure the footer stays on top */
-        }
-
-        /* Button styling */
-        .button {
-            display: inline-block;
-            padding: 8px 16px; /* Slightly smaller button */
-            font-size: 14px; /* Slightly smaller text */
-            color: #fff;
-            background-color: #007bff;
-            border: none;
-            border-radius: 8px;
-            text-align: center;
-            cursor: pointer;
-            text-decoration: none;
-            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-            margin-top: 20px; /* Spacing above button */
-        }
-
-        .button:hover {
-            background-color: #0056b3;
-            transform: scale(1.03); /* Slightly smaller scale effect */
-            box-shadow: 0 6px 8px rgba(0,0,0,0.3);
-        }
-
-        /* Image styling */
-        .image-placeholder {
-            width: 85%; /* Increase width */
-            max-height: 350px; /* Reduce height slightly */
-            margin: 0 auto 15px auto; /* Center the image and add spacing below */
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            display: block; /* Ensures the image is centered */
-            object-fit: cover; /* Ensures the image maintains aspect ratio */
-        }
-
-        /* AOS animations */
-        [data-aos="fade-up"] {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s, transform 0.6s;
-        }
-
-        [data-aos="fade-up"].aos-animate {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Lists styling */
-        ul {
-            list-style: disc inside;
-            margin-top: 10px;
-        }
-    </style>
-    <script src="https://cdn.botpress.cloud/webchat/v2.1/inject.js"></script>
-    <script src="https://mediafiles.botpress.cloud/47d4a0b8-d010-4c7f-9902-0957cc4dfb19/webchat/v2.1/config.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            AOS.init();
-        });
-
-        // Function to open the Botpress chatbot
-        function openChatbot() {
-            window.botpressWebChat.show(); // Show the chatbot
-        }
-    </script>
+    <!-- External CSS for Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
-<body class="bg-green-100 text-gray-800">
+<body>
 
     <!-- Navigation Bar -->
-    <nav class="bg-green-900 p-4 shadow-lg">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-white text-2xl font-bold">Aquaponics Guide</h1>
-            <ul class="flex space-x-6">
-                <li><a href="#about" class="text-white hover:text-green-300">About</a></li>
-                <li><a href="#types" class="text-white hover:text-green-300">Types</a></li>
-                <li><a href="#setup" class="text-white hover:text-green-300">Setup</a></li>
-                <li><a href="#plants-fish" class="text-white hover:text-green-300">Plants & Fish</a></li>
-                <li><a href="#contact" class="text-white hover:text-green-300">Contact</a></li>
-            </ul>
-        </div>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#types">Types</a></li>
+            <li><a href="#setup">Setup</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
 
     <!-- Home Section -->
-    <section id="home" class="h-[80vh] flex flex-col items-center justify-center text-center text-white bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?aquaponics');">
-        <h2 class="text-4xl font-bold mb-4">The Future of Sustainable Farming</h2>
-        <p class="text-xl mb-6">Grow plants and fish together in a self-sustaining ecosystem!</p>
-        <a href="#about" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg">Learn More</a>
+    <section class="home">
+        <div>
+            <h1>Welcome to Aquaponics</h1>
+            <p>The future of sustainable farming is here! Grow fish and plants together.</p>
+            <a href="#about" class="button">Learn More</a>
+        </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="p-8 bg-white">
-        <h2 class="text-3xl font-bold mb-4">What is Aquaponics?</h2>
-        <p class="text-lg">Aquaponics is a combination of aquaculture (raising fish) and hydroponics (growing plants without soil). The fish provide nutrients for the plants, and the plants help clean the water for the fish — a perfect, sustainable cycle.</p>
+    <section id="about" data-aos="fade-up">
+        <h2>What is Aquaponics?</h2>
+        <p>Aquaponics is a combination of aquaculture (raising fish) and hydroponics (growing plants without soil). The fish provide nutrients for the plants, and the plants help clean the water for the fish.</p>
     </section>
 
     <!-- Types of Aquaponics Systems -->
-    <section id="types" class="p-8 bg-green-100">
-        <h2 class="text-3xl font-bold mb-4">Types of Aquaponics Systems</h2>
-        <ul class="list-disc list-inside text-lg">
-            <li><strong>Media Bed System:</strong> Uses gravel or clay pebbles as a growing medium.</li>
-            <li><strong>Nutrient Film Technique (NFT):</strong> Water flows in shallow channels for plant roots.</li>
+    <section id="types" data-aos="fade-up">
+        <h2>Types of Aquaponics Systems</h2>
+        <ul>
+            <li><strong>Media Bed System:</strong> Uses gravel or clay pebbles.</li>
+            <li><strong>Nutrient Film Technique (NFT):</strong> Water flows in shallow channels.</li>
             <li><strong>Deep Water Culture (DWC):</strong> Plants float on rafts in nutrient-rich water.</li>
         </ul>
     </section>
 
     <!-- Setup Section -->
-    <section id="setup" class="p-8 bg-white">
-        <h2 class="text-3xl font-bold mb-4">How to Set Up Your Aquaponics System</h2>
-        <ol class="list-decimal list-inside text-lg">
-            <li>Choose a location (backyard, greenhouse, rooftop).</li>
-            <li>Set up a fish tank and fill it with dechlorinated water.</li>
-            <li>Install grow beds above or beside the tank.</li>
-            <li>Add pumps, pipes, and aeration systems.</li>
-            <li>Introduce bacteria to convert fish waste into nutrients.</li>
-            <li>Add fish and plants after 3-4 weeks of cycling.</li>
+    <section id="setup" data-aos="fade-up">
+        <h2>How to Set Up Your Aquaponics System</h2>
+        <ol>
+            <li>Choose a location.</li>
+            <li>Set up a fish tank and grow beds.</li>
+            <li>Add pumps, pipes, and aeration.</li>
+            <li>Introduce fish and plants.</li>
         </ol>
     </section>
 
-    <!-- Best Plants & Fish -->
-    <section id="plants-fish" class="p-8 bg-green-100">
-        <h2 class="text-3xl font-bold mb-4">Best Plants & Fish for Aquaponics</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-                <h3 class="text-2xl font-semibold mb-2">🌱 Best Plants</h3>
-                <ul class="list-disc list-inside text-lg">
-                    <li>Lettuce</li>
-                    <li>Spinach</li>
-                    <li>Mint</li>
-                    <li>Tomatoes</li>
-                    <li>Strawberries</li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="text-2xl font-semibold mb-2">🐟 Best Fish</h3>
-                <ul class="list-disc list-inside text-lg">
-                    <li>Tilapia</li>
-                    <li>Catfish</li>
-                    <li>Trout</li>
-                    <li>Goldfish (for decorative systems)</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
     <!-- Contact Section -->
-    <section id="contact" class="p-8 bg-white">
-        <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
-        <p class="text-lg">Have questions or want to start your own aquaponics system? Reach out to us!</p>
-        <form class="mt-4">
-            <input type="text" placeholder="Your Name" class="border p-2 rounded w-full mb-2">
-            <input type="email" placeholder="Your Email" class="border p-2 rounded w-full mb-2">
-            <textarea placeholder="Your Message" class="border p-2 rounded w-full mb-2"></textarea>
-            <button class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded">Submit</button>
+    <section id="contact" data-aos="fade-up">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea placeholder="Your Message"></textarea>
+            <button>Submit</button>
         </form>
     </section>
 
+    <!-- Chatbot Access Button -->
+    <a href="https://shreyassrikantapuram.github.io/AI_ChatBot/" class="chatbot-button" target="_blank">
+        Chat with AI
+    </a>
+
     <!-- Footer -->
-    <footer class="bg-green-900 text-white p-4 text-center">
+    <footer>
         <p>&copy; 2025 Aquaponics Guide | All rights reserved.</p>
     </footer>
 
+    <!-- External JS for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
 </body>
 </html>
-
