@@ -1,183 +1,96 @@
-/* General Page Styling */
-/* Title Section */
-.title-section {
-    background: rgba(0, 90, 78, 0.8); /* Dark Green Transparent */
-    color: white;
-    text-align: center;
-    padding: 20px;
-    font-size: 24px;
-    font-weight: bold;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    color: #333;
-    position: relative;
 }
 
-/* Background Image */
-.background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('images/background.jpg') no-repeat center center/cover;
-    z-index: -1;
-}
-
-/* Main Content */
-.content {
-    max-width: 900px;
-    margin: 40px auto;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-h1, h2 {
+/* Header */
+header {
+    background: url('background.jpg') no-repeat center center/cover;
     text-align: center;
-    color: #005a4e;
+    padding: 60px;
+    color: white;
+    font-size: 1.5em;
 }
 
-p {
-    text-align: justify;
-    line-height: 1.6;
+/* Navigation Bar */
+nav {
+    background: #007a33;
+    text-align: center;
+    padding: 10px 0;
 }
 
-/* Lists & Sections */
-ul, ol {
-    margin: 10px 0;
-    padding-left: 20px;
+nav ul {
+    list-style: none;
+    padding: 0;
 }
 
-/* Image Gallery */
-.gallery {
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Sections */
+section {
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #007a33;
+}
+
+/* Fish & Plants Grid */
+.content-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 15px;
-    margin-top: 20px;
+    justify-content: space-between;
 }
 
-.item {
-    width: 250px;
+.fish, .plants {
+    width: 48%;
+}
+
+.fish h3, .plants h3 {
     text-align: center;
-    background: #ffffff;
+    background: #007a33;
+    color: white;
     padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
 
-.item img {
-    width: 100%;
-    height: auto;
+.fish-item, .plant-item {
+    display: flex;
+    align-items: center;
+    background: #e3f9e3;
+    margin: 10px 0;
+    padding: 10px;
     border-radius: 5px;
 }
 
-/* Chatbot Floating Button */
-#chatbot-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #00796b;
-    border: none;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+.fish-item img, .plant-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    margin-right: 10px;
 }
 
-#chatbot-button img {
-    width: 35px;
-    height: 35px;
-    margin-top: 12px;
-}
-
-/* Chatbot Popup */
-#chatbot-container {
-    position: fixed;
-    bottom: 80px;
-    right: 20px;
-    width: 320px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    display: none;
-    flex-direction: column;
-}
-
-/* Chatbot Header */
-#chatbox-header {
-    background: #005a4e;
+/* Footer */
+footer {
+    background: #007a33;
     color: white;
-    padding: 10px;
-    font-size: 16px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 10px 10px 0 0;
-}
-
-#close-chatbot {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-/* Chat Messages */
-#chat-messages {
-    height: 250px;
-    overflow-y: auto;
-    padding: 10px;
-    background: #f8f8f8;
-}
-
-/* Chat Input */
-#chat-input {
-    display: flex;
-    border-top: 1px solid #ddd;
-}
-
-#user-input {
-    flex: 1;
-    padding: 10px;
-    border: none;
-    border-radius: 0 0 0 10px;
-}
-
-#send-button {
-    background: #00796b;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 0 0 10px 0;
-}
-
-/* User & Bot Messages */
-.user {
-    background: #00796b;
-    color: white;
-    padding: 8px 12px;
-    border-radius: 10px;
-    margin: 5px 0;
-    text-align: right;
-}
-
-.bot {
-    background: #e0e0e0;
-    padding: 8px 12px;
-    border-radius: 10px;
-    margin: 5px 0;
-    text-align: left;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
 }
