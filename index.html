@@ -79,6 +79,46 @@
             object-fit: cover;
         }
 
+         /* Button styling */
+        .button {
+            display: inline-block;
+            padding: 8px 16px; /* Slightly smaller button */
+            font-size: 14px; /* Slightly smaller text */
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            margin-top: 20px; /* Spacing above button */
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+            transform: scale(1.03); /* Slightly smaller scale effect */
+            box-shadow: 0 6px 8px rgba(0,0,0,0.3);
+        }
+
+          ul {
+            list-style: disc inside;
+            margin-top: 10px;
+        }
+    </style>
+    <script src="https://cdn.botpress.cloud/webchat/v2.1/inject.js"></script>
+    <script src="https://mediafiles.botpress.cloud/47d4a0b8-d010-4c7f-9902-0957cc4dfb19/webchat/v2.1/config.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init();
+        });
+ function openChatbot() {
+            window.botpressWebChat.show(); // Show the chatbot
+        }
+    </script>
+
         /* Preserved Chatbot Styles */
         #chatbot { /* Your existing chatbot styles */ }
         #chatButton { /* Your existing button styles */ }
