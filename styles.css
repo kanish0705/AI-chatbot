@@ -1,4 +1,4 @@
-/* General Styles */
+/* General Styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -14,13 +14,12 @@ header {
     color: white;
     padding: 20px;
     text-align: center;
-    font-size: 24px;
 }
 
-/* Navigation Bar */
+/* Navigation */
 nav {
     background: #004d40;
-    padding: 10px 0;
+    padding: 10px;
     text-align: center;
 }
 
@@ -39,18 +38,13 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
-    padding: 8px 12px;
-}
-
-nav ul li a:hover {
-    background: #00796b;
-    border-radius: 5px;
+    padding: 8px;
 }
 
 /* Sections */
 section {
     padding: 40px;
-    max-width: 900px;
+    max-width: 800px;
     margin: auto;
     background: rgba(255, 255, 255, 0.9);
     margin-bottom: 20px;
@@ -61,7 +55,7 @@ section {
 img {
     display: block;
     width: 70%;
-    max-width: 400px;
+    max-width: 350px;
     margin: 20px auto;
     border-radius: 10px;
 }
@@ -69,32 +63,23 @@ img {
 /* Chatbot Floating Button */
 #chatbot-button {
     position: fixed;
-    bottom: 50px;
+    bottom: 80px;
     right: 30px;
     width: 60px;
     height: 60px;
     background-color: #4285F4;
     border: none;
     border-radius: 50%;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    color: white;
+    font-size: 18px;
     cursor: pointer;
-    transition: 0.3s;
 }
 
-/* Chatbot Icon */
-#chatbot-button img {
-    width: 35px;
-    height: 35px;
-}
-
-/* Chatbot Container */
+/* Chatbot Popup */
 #chatbot-container {
     display: none;
     position: fixed;
-    bottom: 120px;
+    bottom: 100px;
     right: 30px;
     width: 320px;
     background: white;
@@ -108,45 +93,14 @@ img {
     color: white;
     padding: 10px;
     text-align: center;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-/* Chat Messages */
-#chat-messages {
-    padding: 10px;
-    height: 300px;
-    overflow-y: auto;
-}
-
-/* Chat Input */
-#chat-input {
     display: flex;
-    padding: 10px;
+    justify-content: space-between;
 }
 
-#user-input {
-    flex: 1;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-#send-button {
-    padding: 8px 15px;
-    background: #4285F4;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-/* Responsive Design */
+/* Responsive */
 @media screen and (max-width: 768px) {
     nav ul li {
         display: block;
         margin-bottom: 10px;
-    }
-    section {
-        width: 90%;
     }
 }
