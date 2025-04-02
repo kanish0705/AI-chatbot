@@ -1,77 +1,67 @@
-/* 🌿 General */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: url('background.jpg') no-repeat center center fixed;
+    background-image: url('background.jpg');
     background-size: cover;
-    color: #333;
-}
-
-/* 🌱 Header */
-header {
-    background: rgba(0, 100, 0, 0.8);
     color: white;
     text-align: center;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.8);
     padding: 20px;
 }
 
-/* 🌍 Navigation */
 nav ul {
-    background: green;
-    list-style: none;
-    padding: 10px;
-    text-align: center;
+    list-style-type: none;
+    padding: 0;
+    background: rgba(0, 0, 0, 0.7);
 }
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin: 15px;
 }
 
-nav ul li a {
+nav a {
     color: white;
     text-decoration: none;
+    font-size: 18px;
 }
 
-/* 🌱 Sections */
 section {
-    padding: 40px;
-    margin: 20px;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
+    padding: 50px;
 }
 
-/* 🖼 Image Grid */
 .grid-container {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.grid-item {
-    text-align: center;
-    margin: 20px;
+    justify-content: center;
+    gap: 20px;
 }
 
 .grid-item img {
-    width: 200px; /* Adjusted Image Size */
+    width: 150px;
     height: auto;
     border-radius: 10px;
-    display: block;
-    margin: auto;
 }
 
-/* 🟢 Floating Chatbot Button */
-#chatbot-btn {
+.button {
+    padding: 10px 20px;
+    background: green;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#chatbot-button {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: darkgreen;
+    background: green;
     color: white;
     border: none;
     padding: 15px;
+    font-size: 20px;
     cursor: pointer;
-    font-size: 16px;
-    border-radius: 8px;
 }
