@@ -35,32 +35,36 @@ header {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
+/* Navigation List */
 .navbar ul {
     list-style: none;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 0;
-    margin: 0;
 }
 
+/* Navigation Items */
 .navbar ul li {
     margin: 0 15px;
 }
 
+/* Navigation Links as Buttons */
 .navbar ul li a {
     text-decoration: none;
     color: white;
     font-size: 18px;
     font-weight: bold;
-    padding: 10px;
-    transition: color 0.3s, background 0.3s;
-    border-radius: 5px;
+    padding: 12px 18px;
+    background: #007bff;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+    display: inline-block;
 }
 
+/* Hover Effect */
 .navbar ul li a:hover {
-    color: #00bcd4;
-    background: rgba(255, 255, 255, 0.1);
+    background: #0056b3;
+    transform: scale(1.05);
 }
 
 /* Section Styling */
@@ -130,6 +134,7 @@ section:hover {
 @media screen and (max-width: 768px) {
     .navbar ul {
         flex-direction: column;
+        align-items: center;
     }
 
     .navbar ul li {
