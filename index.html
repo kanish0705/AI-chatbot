@@ -3,132 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aquaponics_Guide</title>
+    <title>Aquaponics Guide</title>
     <style>
         /* Basic Reset */
-        body, h1, h2, p, ul {
+        body, h1, h2, p, ul, li, a, button {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
-        /* Body styling */
+        /* Body Styling */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #333;
             background: linear-gradient(135deg, #e0eafc, #cfdef3);
-            scroll-behavior: smooth;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        /* Header styling */
+        /* Header */
         header {
             background: #333;
-            color: #fff;
-            padding: 20px;
+            color: white;
             text-align: center;
+            padding: 20px;
+            width: 100%;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background: #222;
+            padding: 10px 0;
+            width: 100%;
             position: sticky;
             top: 0;
-            width: 100%;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            z-index: 10; /* Ensure the header stays on top */
+            z-index: 10;
         }
 
-        /* Section styling */
-        section {
-            padding: 30px;
-            margin: 20px auto;
-            max-width: 800px;
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            animation: fadeIn 1s ease-in;
-            position: relative;
-            transition: transform 0.3s, box-shadow 0.3s; /* Hover effects */
+        /* Nav List (Aligned Horizontally) */
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center;
+            gap: 15px; /* Adds space between buttons */
+            padding: 0;
         }
 
-        /* Hover effect for sections */
-        section:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        /* Individual Nav Items */
+        .navbar ul li {
+            display: inline-block;
         }
 
-        /* Floating Chatbot Button */
-   
-        #chatbot-button:hover {
-            background-color: #0056b3;
+        /* Button Styling */
+        .navbar ul li a {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 12px 20px;
+            background: #007bff;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.2s;
         }
 
-        /* Image styling */
-        .image-placeholder {
-            width: 85%;
-            max-height: 350px;
-            margin: 0 auto 15px auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            display: block;
-            object-fit: cover;
+        .navbar ul li a:hover {
+            background: #0056b3;
+            transform: scale(1.05);
         }
 
-        /* AOS animations */
-        [data-aos="fade-up"] {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s, transform 0.6s;
-        }
-
-        [data-aos="fade-up"].aos-animate {
-            opacity: 1;
-            transform: translateY(0);
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .navbar ul {
+                flex-direction: column; /* Stack buttons in mobile view */
+                gap: 10px;
+            }
         }
     </style>
-
-    <!-- Botpress Chatbot Scripts -->
-    <script src="https://cdn.botpress.cloud/webchat/v2.1/inject.js"></script>
-    <script src="https://mediafiles.botpress.cloud/47d4a0b8-d010-4c7f-9902-0957cc4dfb19/webchat/v2.1/config.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            AOS.init();
-        });
-
-        // Function to open the Botpress chatbot
-        function openChatbot() {
-            window.botpressWebChat.show(); // Show the chatbot
-        }
-    </script>
 </head>
 <body>
+
     <header>
-        <h1>Aquaponics-The Sustainable Agriculture</h1>
+        <h1>Aquaponics - The Sustainable Agriculture</h1>
     </header>
-     <nav class="navbar">
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Know More</a></li>
-        <li><a href="#">Plants</a></li>
-        <li><a href="#">Fish</a></li>
-        <li><a href="#">Revenue</a></li>
-        <li><a href="#">How to Build</a></li>
-    </ul>
-    </nav>
 
-
-    <section id="section1" data-aos="fade-up">
-        <img src="pic2.png" alt="AI Chatbot" class="image-placeholder">
-        <h2>AI aquaponics powered guide</h2>
-        <p><strong>Conversational Interface:</strong> An AI chatbot that interacts with users to understand the resources they have and their goals.</p>
-        <p><strong>Suggestion Engine:</strong> Provides ideas on how to transform and utilize resources efficiently. This could include:</p>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
         <ul>
-            <li><strong>Upcycling:</strong> Creative ways to repurpose or recycle materials.</li>
-            <li><strong>Optimization Techniques:</strong> Suggestions on how to improve energy efficiency or reduce waste.</li>
-            <li><strong>New Product Ideas:</strong> Innovative uses of existing resources to create new products or technologies.</li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Know More</a></li>
+            <li><a href="#">Plants</a></li>
+            <li><a href="#">Fish</a></li>
+            <li><a href="#">Revenue</a></li>
+            <li><a href="#">How to Build</a></li>
         </ul>
-        <p><strong>Step-by-Step Guidance:</strong> Detailed steps to implement the suggested ideas, including required tools, processes, and potential outcomes.</p>
-    </section>
-
-    <!-- Floating Chatbot Button -->
-    <button id="chatbot-button" onclick="openChatbot()">Chat with Us</button>
+    </nav>
 
 </body>
 </html>
