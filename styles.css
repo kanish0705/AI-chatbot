@@ -1,32 +1,32 @@
-/* Global Styles */
+/* 🌿 Global Styles */
 body {
     font-family: Arial, sans-serif;
-    background: url('background.jpg') no-repeat center center/cover;
+    margin: 0;
+    padding: 0;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
     color: white;
-    text-align: center;
 }
 
-/* Header */
+/* 🌱 Header */
 header {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 100, 0, 0.8);
+    text-align: center;
     padding: 20px;
 }
 
-h1 {
-    margin: 0;
-    font-size: 36px;
-}
-
-/* Navigation */
+/* 🌍 Navigation */
 nav ul {
+    background: green;
     list-style: none;
-    padding: 0;
-    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    text-align: center;
 }
 
 nav ul li {
     display: inline;
-    margin: 10px;
+    margin: 0 15px;
 }
 
 nav ul li a {
@@ -34,39 +34,26 @@ nav ul li a {
     text-decoration: none;
 }
 
-/* Sections */
+/* 📖 Section Styles */
 section {
-    padding: 40px;
+    padding: 50px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    margin: 20px;
+    border-radius: 10px;
 }
 
-.grid-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.grid-item {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 15px;
-    width: 80%;
-}
-
-.grid-item img {
-    width: 100%;
-}
-
-/* Floating Chatbot Button */
+/* 🟢 Floating Chatbot Button */
 #chatbot {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 60px;
-    height: 60px;
-    background: rgba(0, 255, 0, 0.8);
-    border-radius: 50%;
+    cursor: pointer;
 }
 
 #chatbot img {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
