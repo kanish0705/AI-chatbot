@@ -19,42 +19,46 @@ header {
     color: #fff;
     padding: 20px;
     text-align: center;
-    position: sticky;
-    top: 0;
     width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 10;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 /* Navigation Bar */
 .navbar {
-    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: #2e7d32; /* Dark Green */
+    padding: 10px 0;
 }
 
 .navbar ul {
     list-style-type: none;
-    padding: 0;
+    display: flex;
+    gap: 20px;
 }
 
 .navbar ul li {
-    display: inline;
-    margin: 0 15px;
+    display: inline-block;
 }
 
 .navbar ul li a {
     text-decoration: none;
-    color: #d4edda; /* Light Green Text */
-    font-size: 18px;
+    background-color: #43a047; /* Green Button */
+    color: white;
+    font-size: 16px;
     font-weight: bold;
-    padding: 8px 12px;
-    transition: 0.3s;
+    padding: 12px 20px;
+    display: block;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
 }
 
-/* Hover Effect */
 .navbar ul li a:hover {
-    background-color: #43a047; /* Medium Green */
-    border-radius: 5px;
-    padding: 8px 12px;
+    background-color: #1b5e20; /* Darker Green on Hover */
+    transform: scale(1.1);
 }
 
 /* Section Styling */
@@ -68,9 +72,8 @@ section {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Hover Effect for Sections */
 section:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -116,104 +119,4 @@ section:hover {
 [data-aos="fade-up"].aos-animate {
     opacity: 1;
     transform: translateY(0);
-}
-/* Reset default margin & padding */
-body, h1, h2, p, ul {
-    margin: 0;
-    padding: 0;
-}
-
-/* Body Styling */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #2d3e2f; /* Dark green text */
-    background: linear-gradient(135deg, #d9f2d9, #bde0bd); /* Light green gradient */
-    scroll-behavior: smooth; /* Enables smooth scrolling */
-}
-
-/* Header Styling */
-header {
-    background: #1b5e20; /* Dark Green */
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    width: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Navigation Bar (Horizontal) */
-.navbar {
-    display: flex;
-    justify-content: center;
-    background-color: #2e7d32; /* Dark Green */
-    padding: 10px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-/* Styling for Navigation Buttons */
-.navbar ul {
-    list-style-type: none;
-    display: flex;
-    gap: 20px;
-}
-
-.navbar ul li {
-    display: inline-block;
-}
-
-.navbar ul li a {
-    text-decoration: none;
-    background-color: #43a047; /* Green Button */
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 12px 20px;
-    display: block;
-    border-radius: 8px;
-    transition: background 0.3s, transform 0.2s;
-}
-
-.navbar ul li a:hover {
-    background-color: #1b5e20; /* Darker Green on Hover */
-    transform: scale(1.1);
-}
-
-/* Section Styling */
-section {
-    padding: 50px;
-    margin: 20px auto;
-    max-width: 800px;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* Floating Chatbot Button */
-#chatbot-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #43a047;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    font-size: 16px;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, transform 0.2s;
-}
-
-#chatbot-button:hover {
-    background-color: #1b5e20;
-    transform: scale(1.1);
 }
