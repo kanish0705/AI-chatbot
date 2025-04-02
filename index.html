@@ -4,155 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aquaponics Guide</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <style>
-        /* General Reset */
-        body, h1, h2, p, ul, ol {
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #e0eafc, #cfdef3);
-            color: #333;
-            scroll-behavior: smooth;
-        }
-        header {
-            background: #2d6a4f;
-            color: white;
-            padding: 15px 0;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            width: 100%;
-            z-index: 10;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-        section {
-            padding: 40px;
-            margin: 20px auto;
-            max-width: 900px;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            animation: fadeIn 1s ease-in;
-        }
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 16px;
-            color: #fff;
-            background-color: #28a745;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            text-decoration: none;
-            transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-            margin-top: 20px;
-        }
-        .button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-        }
-        footer {
-            background: #2d6a4f;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        ul, ol {
-            margin-top: 10px;
-        }
-        [data-aos="fade-up"] {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s, transform 0.6s;
-        }
-        [data-aos="fade-up"].aos-animate {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
-    <script src="https://cdn.botpress.cloud/webchat/v2.1/inject.js"></script>
-    <script src="https://mediafiles.botpress.cloud/47d4a0b8-d010-4c7f-9902-0957cc4dfb19/webchat/v2.1/config.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            AOS.init();
-        });
-        function openChatbot() {
-            window.botpressWebChat.show();
-        }
-    </script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- 🌿 Header Section -->
     <header>
         <h1>Aquaponics Guide</h1>
     </header>
 
-    <section id="intro" data-aos="fade-up">
-        <h2>Welcome to Aquaponics</h2>
-        <p>Aquaponics is a revolutionary way of growing plants and fish together in a self-sustaining ecosystem.</p>
-        <button class="button" onclick="openChatbot()">Chat with AI</button>
-    </section>
-
-    <section id="benefits" data-aos="fade-up">
-        <h2>Benefits of Aquaponics</h2>
+    <!-- 🌱 Navigation Bar -->
+    <nav>
         <ul>
-            <li>🚰 Uses 90% less water than traditional farming.</li>
-            <li>🌱 No need for chemical fertilizers.</li>
-            <li>🐟 Produces fresh fish and organic vegetables.</li>
-            <li>♻️ Environmentally friendly and sustainable.</li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#guide">Guide</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
+    </nav>
+
+    <!-- 🏡 Home Section -->
+    <section id="home">
+        <h1>Welcome to the Future of Farming</h1>
+        <p>Discover how to grow plants and fish together in a sustainable way.</p>
+        <a href="#guide" class="button">Get Started</a>
     </section>
 
-    <section id="setup" data-aos="fade-up">
-        <h2>Setting Up an Aquaponics System</h2>
-        <ol>
-            <li>Choose a suitable location (backyard, rooftop, greenhouse).</li>
-            <li>Install a fish tank and a grow bed.</li>
-            <li>Use water pumps and aeration systems.</li>
-            <li>Introduce beneficial bacteria for nutrient conversion.</li>
-            <li>Add fish and plants after 3-4 weeks.</li>
-        </ol>
+    <!-- 📖 Guide Section -->
+    <section id="guide">
+        <h2>Best Plants & Fish for Aquaponics</h2>
+        <div class="grid-container">
+            
+            <!-- Plants -->
+            <div class="grid-item">
+                <img src="img/lettuce.jpg" alt="Lettuce">
+                <h3>Lettuce</h3>
+                <p>A fast-growing leafy vegetable ideal for aquaponics.</p>
+            </div>
+
+            <div class="grid-item">
+                <img src="img/basil.jpg" alt="Basil">
+                <h3>Basil</h3>
+                <p>An aromatic herb that thrives in aquaponics systems.</p>
+            </div>
+
+            <div class="grid-item">
+                <img src="img/tomato.jpg" alt="Tomato">
+                <h3>Tomatoes</h3>
+                <p>A popular fruiting plant for aquaponics setups.</p>
+            </div>
+
+            <!-- Fish -->
+            <div class="grid-item">
+                <img src="img/tilapia.jpg" alt="Tilapia">
+                <h3>Tilapia</h3>
+                <p>Aquaponics-friendly fish that grows quickly.</p>
+            </div>
+
+            <div class="grid-item">
+                <img src="img/catfish.jpg" alt="Catfish">
+                <h3>Catfish</h3>
+                <p>A hardy fish that can tolerate various water conditions.</p>
+            </div>
+
+            <div class="grid-item">
+                <img src="img/goldfish.jpg" alt="Goldfish">
+                <h3>Goldfish</h3>
+                <p>A low-maintenance fish for small systems.</p>
+            </div>
+
+        </div>
     </section>
 
-    <section id="challenges" data-aos="fade-up">
-        <h2>Common Challenges & Solutions</h2>
-        <ul>
-            <li><strong>Algae Growth:</strong> Reduce sunlight exposure and clean regularly.</li>
-            <li><strong>pH Imbalance:</strong> Monitor weekly and adjust with natural buffers.</li>
-            <li><strong>Oxygen Levels:</strong> Install aerators or add oxygenating plants.</li>
-        </ul>
-    </section>
-
-    <section id="real-world" data-aos="fade-up">
-        <h2>Real-World Applications</h2>
-        <p>Aquaponics is used in urban farming, schools, and commercial agriculture.</p>
-        <ul>
-            <li>🏙️ <strong>Urban Areas:</strong> Provides fresh food in cities.</li>
-            <li>🏫 <strong>Schools:</strong> Helps students learn about sustainable agriculture.</li>
-            <li>🚜 <strong>Commercial Farms:</strong> Large-scale production of organic crops.</li>
-        </ul>
-    </section>
-
-    <section id="contact" data-aos="fade-up">
+    <!-- 📞 Contact Section -->
+    <section id="contact">
         <h2>Contact Us</h2>
-        <p>Have questions or want to start your own aquaponics system? Reach out to us!</p>
-        <form>
-            <input type="text" placeholder="Your Name" class="border p-2 rounded w-full mb-2">
-            <input type="email" placeholder="Your Email" class="border p-2 rounded w-full mb-2">
-            <textarea placeholder="Your Message" class="border p-2 rounded w-full mb-2"></textarea>
-            <button class="button">Submit</button>
-        </form>
+        <p>Email: aquaponics@example.com</p>
     </section>
 
+    <!-- 🟢 Floating Chatbot Button -->
+    <div id="chatbot">
+        <img src="img/chatbot-icon.png" alt="Chatbot">
+    </div>
+
+    <!-- 🌍 Footer -->
     <footer>
-        <p>&copy; 2025 Aquaponics Guide | All rights reserved.</p>
+        <p>&copy; 2025 Aquaponics Guide. All rights reserved.</p>
     </footer>
+
 </body>
 </html>
