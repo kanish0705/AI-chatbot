@@ -8,92 +8,49 @@
 </head>
 <body>
 
-    <!-- Navigation Bar -->
+    <!-- Header Section -->
     <header>
         <h1>Aquaponics Guide</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">Know More</a></li>
-                <li><a href="#plants">Plants</a></li>
-                <li><a href="#fish">Fish</a></li>
-                <li><a href="#build">How to Build</a></li>
-                <li><a href="#revenue">Revenue</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <!-- Home Section -->
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#guide">Guide</a></li>
+            <li><a href="#plants">Plants</a></li>
+            <li><a href="#fish">Fish</a></li>
+            <li><a href="#build">How to Build</a></li>
+            <li><a href="#revenue">Make Revenue</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sections -->
     <section id="home">
-        <h2>Welcome to Sustainable Farming</h2>
-        <p>Aquaponics is an innovative way to grow food efficiently.</p>
+        <h2>Welcome to the Future of Farming</h2>
+        <p>Discover how to grow plants and fish together in a sustainable way.</p>
     </section>
 
-    <!-- About Section -->
-    <section id="about">
+    <section id="guide">
         <h2>What is Aquaponics?</h2>
-        <p>Aquaponics is a method that combines fish farming and plant growth in one system.</p>
+        <p>Aquaponics is a food production system that combines aquaculture (raising fish) and hydroponics (growing plants without soil). The fish waste provides nutrients for plants, and the plants help filter the water for the fish.</p>
     </section>
 
-    <!-- Plants Section (Vertical Layout) -->
-    <section id="plants">
-        <h2>Plants Suitable for Aquaponics</h2>
-        <div class="vertical-list">
-            <div class="item">
-                <img src="lettuce.jpg" alt="Lettuce">
-                <p><strong>Lettuce:</strong> Grows well in aquaponic setups.</p>
-            </div>
-            <div class="item">
-                <img src="basil.jpg" alt="Basil">
-                <p><strong>Basil:</strong> Requires minimal maintenance.</p>
-            </div>
-            <div class="item">
-                <img src="tomato.jpg" alt="Tomato">
-                <p><strong>Tomato:</strong> High-yielding fruiting plant.</p>
-            </div>
+    <!-- Chatbot Floating Button -->
+    <button id="chatbot-button">
+        <img src="chat-icon.png" alt="Chat">
+    </button>
+
+    <!-- Chatbot Window -->
+    <div id="chatbot-container">
+        <div id="chatbox-header">AI Chatbot</div>
+        <div id="chat-messages"></div>
+        <div id="chat-input">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button id="send-button">Send</button>
         </div>
-    </section>
-
-    <!-- Fish Section (Vertical Layout) -->
-    <section id="fish">
-        <h2>Fish Suitable for Aquaponics</h2>
-        <div class="vertical-list">
-            <div class="item">
-                <img src="tilapia.jpg" alt="Tilapia">
-                <p><strong>Tilapia:</strong> Hardy and easy to grow.</p>
-            </div>
-            <div class="item">
-                <img src="catfish.jpg" alt="Catfish">
-                <p><strong>Catfish:</strong> Can tolerate varied water conditions.</p>
-            </div>
-            <div class="item">
-                <img src="goldfish.jpg" alt="Goldfish">
-                <p><strong>Goldfish:</strong> Ideal for beginners.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- How to Build Section -->
-    <section id="build">
-        <h2>How to Build an Aquaponics System</h2>
-        <p>Step-by-step guide on setting up an aquaponic system.</p>
-    </section>
-
-    <!-- Revenue Section -->
-    <section id="revenue">
-        <h2>Revenue Opportunities</h2>
-        <p>Sell fresh produce, fish, or aquaponic systems.</p>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: aquaponics@example.com</p>
-    </section>
-
-    <!-- Floating Chatbot Button -->
-    <button id="chatbot-button"></button>
+    </div>
 
     <script src="script.js"></script>
     <script src="chatbot.js"></script>
