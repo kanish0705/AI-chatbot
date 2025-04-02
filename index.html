@@ -179,13 +179,21 @@
         </section>
     </main>
 
-    <!-- Preserved Chatbot Elements -->
-    <div id="chatbot">
-        <!-- Your existing chatbot HTML -->
+<!-- Chatbot Floating Button -->
+<button id="chatButton">
+    <span class="chat-icon">💬</span>
+</button>
+
+<!-- Chatbot Window -->
+<div id="chatbot">
+    <div class="chat-header">
+        <span>Chatbot</span>
+        <button id="closeChat">✖</button>
     </div>
-    <button id="chatButton" class="chat-toggle">
-        <img src="message-icon.png" alt="Chat">
-    </button>
+    <div class="chat-body">
+        <p>Hi! How can I help you?</p>
+    </div>
+</div>
 
     <script src="chatbot.js"></script>
 </body>
