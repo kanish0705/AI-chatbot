@@ -4,47 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aquaponics Guide</title>
-
-    <!-- Link to External CSS -->
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init();
+        });
 
-    <!-- External CSS for Animations -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+        function openChatbot() {
+            document.getElementById("chatbox-container").classList.toggle("active");
+        }
+    </script>
 </head>
 <body>
 
     <!-- Navigation Bar -->
-    <nav>
+    <nav class="navbar">
+        <h1>Aquaponics Guide</h1>
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#types">Types</a></li>
             <li><a href="#setup">Setup</a></li>
+            <li><a href="#plants-fish">Plants & Fish</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Home Section -->
-    <section class="home">
-        <div>
-            <h1>Welcome to Aquaponics</h1>
-            <p>The future of sustainable farming is here! Grow fish and plants together.</p>
-            <a href="#about" class="button">Learn More</a>
-        </div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h2>The Future of Sustainable Farming</h2>
+        <p>Grow plants and fish together in a self-sustaining ecosystem!</p>
+        <a href="#about" class="button">Learn More</a>
     </section>
 
     <!-- About Section -->
     <section id="about" data-aos="fade-up">
         <h2>What is Aquaponics?</h2>
-        <p>Aquaponics is a combination of aquaculture (raising fish) and hydroponics (growing plants without soil). The fish provide nutrients for the plants, and the plants help clean the water for the fish.</p>
+        <p>Aquaponics is an innovative way to grow plants and fish together. Fish waste provides nutrients for plants, and plants purify the water for the fish.</p>
     </section>
 
-    <!-- Types of Aquaponics Systems -->
-    <section id="types" data-aos="fade-up">
-        <h2>Types of Aquaponics Systems</h2>
+    <!-- More Content: Benefits -->
+    <section id="benefits" data-aos="fade-up">
+        <h2>Why Choose Aquaponics?</h2>
         <ul>
-            <li><strong>Media Bed System:</strong> Uses gravel or clay pebbles.</li>
-            <li><strong>Nutrient Film Technique (NFT):</strong> Water flows in shallow channels.</li>
-            <li><strong>Deep Water Culture (DWC):</strong> Plants float on rafts in nutrient-rich water.</li>
+            <li>🚰 Saves 90% more water than traditional farming</li>
+            <li>🌿 Grows food organically without pesticides</li>
+            <li>🐟 Produces fresh fish as a food source</li>
+            <li>💰 Low maintenance costs after setup</li>
         </ul>
     </section>
 
@@ -52,39 +58,55 @@
     <section id="setup" data-aos="fade-up">
         <h2>How to Set Up Your Aquaponics System</h2>
         <ol>
-            <li>Choose a location.</li>
-            <li>Set up a fish tank and grow beds.</li>
-            <li>Add pumps, pipes, and aeration.</li>
-            <li>Introduce fish and plants.</li>
+            <li>Choose a fish tank and grow beds</li>
+            <li>Install water pumps and aeration systems</li>
+            <li>Add beneficial bacteria to convert waste</li>
+            <li>Introduce fish and plants</li>
+            <li>Monitor water quality regularly</li>
         </ol>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" data-aos="fade-up">
-        <h2>Contact Us</h2>
-        <form>
-            <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Your Email">
-            <textarea placeholder="Your Message"></textarea>
-            <button>Submit</button>
-        </form>
+    <!-- Plants & Fish -->
+    <section id="plants-fish" data-aos="fade-up">
+        <h2>Best Plants & Fish for Aquaponics</h2>
+        <div class="grid">
+            <div>
+                <h3>🌱 Best Plants</h3>
+                <ul>
+                    <li>Lettuce</li>
+                    <li>Spinach</li>
+                    <li>Mint</li>
+                    <li>Tomatoes</li>
+                </ul>
+            </div>
+            <div>
+                <h3>🐟 Best Fish</h3>
+                <ul>
+                    <li>Tilapia</li>
+                    <li>Catfish</li>
+                    <li>Trout</li>
+                    <li>Goldfish</li>
+                </ul>
+            </div>
+        </div>
     </section>
 
-    <!-- Chatbot Access Button -->
-    <a href="https://shreyassrikantapuram.github.io/AI_ChatBot/" class="chatbot-button" target="_blank">
-        Chat with AI
-    </a>
+    <!-- Chatbot Button -->
+    <div class="chat-icon" onclick="openChatbot()">💬</div>
+
+    <!-- Chatbot Container -->
+    <div id="chatbox-container">
+        <div class="chatbox-header">
+            <span>Chat with Us!</span>
+            <button onclick="openChatbot()">✖</button>
+        </div>
+        <iframe src="https://mediafiles.botpress.cloud/47d4a0b8-d010-4c7f-9902-0957cc4dfb19/webchat/v2.1/config.js"></iframe>
+    </div>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 Aquaponics Guide | All rights reserved.</p>
     </footer>
-
-    <!-- External JS for Animations -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
 
 </body>
 </html>
