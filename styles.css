@@ -1,76 +1,105 @@
-/* General Styles */
+/* 🌿 Global Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: url("images/background.jpg") no-repeat center center/cover;
-    color: #fff;
     text-align: center;
+    background: url('images/background.jpg') no-repeat center center/cover;
+    color: #fff;
 }
 
-/* Header */
+/* 🌱 Header */
 header {
-    background: rgba(0, 100, 50, 0.8);
+    background-color: rgba(0, 100, 0, 0.8);
     padding: 20px;
-    font-size: 24px;
 }
 
-/* Navigation */
+header h1 {
+    margin: 0;
+}
+
+/* 🏡 Navigation */
+nav {
+    background: rgba(34, 139, 34, 0.9);
+    padding: 15px;
+}
+
 nav ul {
-    list-style-type: none;
-    padding: 10px;
-    background: rgba(0, 150, 75, 0.9);
+    list-style: none;
+    padding: 0;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-size: 18px;
     font-weight: bold;
 }
 
-/* Sections */
+/* 📖 Sections */
 section {
-    padding: 30px;
+    padding: 50px 10px;
 }
 
-h2 {
-    color: #ffcc00;
+#home {
+    background: rgba(0, 100, 0, 0.7);
+    padding: 60px 20px;
+    border-radius: 10px;
 }
 
-/* Grid Layout */
+.button {
+    background: #32CD32;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+}
+
+/* 📦 Grid Layout */
 .grid-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .grid-item {
-    background: rgba(255, 255, 255, 0.2);
-    margin: 15px;
+    background: rgba(0, 100, 0, 0.8);
     padding: 20px;
-    border-radius: 8px;
-    width: 250px;
+    border-radius: 10px;
 }
 
 .grid-item img {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
-/* Floating Chatbot Button */
+/* 📞 Contact */
+#contact {
+    background: rgba(0, 100, 0, 0.8);
+}
+
+/* 🟢 Floating Chatbot Button */
 #chatbot {
     position: fixed;
     bottom: 20px;
     right: 20px;
+    width: 60px;
+    height: 60px;
     background: rgba(255, 255, 255, 0.8);
-    padding: 10px;
     border-radius: 50%;
-    box-shadow: 2px 2px 5px #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     cursor: pointer;
 }
 
@@ -79,11 +108,8 @@ h2 {
     height: 50px;
 }
 
-/* Footer */
+/* 🌍 Footer */
 footer {
-    background: rgba(0, 100, 50, 0.8);
+    background: rgba(34, 139, 34, 0.9);
     padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
 }
