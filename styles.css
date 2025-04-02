@@ -120,3 +120,35 @@ section:hover {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background: #444;
+    padding: 10px 0;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #00bcd4;
+}
+
