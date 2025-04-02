@@ -164,121 +164,115 @@ body {
   line-height: 1.7;
 }
 
-/* Preserved Chatbot Styles (Original Positioning and Functionality) */
-#chatbot {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 380px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-  z-index: 1000;
-  display: none;
-  /* Original styles preserved */
-}
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            background: url('assets/images/hero-bg.jpg') no-repeat center center/cover;
+            color: #fff;
+            animation: fadeIn 1.5s ease-in-out;
+        }
 
-#chat-messages {
-  height: 400px;
-  overflow-y: auto;
-  padding: 15px;
-  background: #f9f9f9;
-  /* Original styles preserved */
-}
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
 
-#user-input {
-  width: calc(100% - 90px);
-  padding: 12px;
-  border: 2px solid #eee;
-  border-radius: 8px;
-  margin: 10px;
-  font-size: 1rem;
-  transition: border-color var(--transition-speed);
-  /* Original styles preserved */
-}
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
 
-#send-button {
-  width: 80px;
-  padding: 12px;
-  background: var(--primary-green);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background var(--transition-speed);
-  /* Original styles preserved */
-}
+        .hero button {
+            padding: 15px 30px;
+            background: #ff4500;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
 
-#chatButton {
-  position: floating;
-  bottom: 30px;
-  right: 30px;
-  background: var(--primary-green);
-  color: blue;
-  border: none;
-  border-radius: 50%;
-  width: 65px;
-  height: 65px;
-  cursor: pointer;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all var(--transition-speed) ease;
-  /* Original styles preserved */
-}
+        .hero button:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+        }
 
-#chatButton:hover {
-  background: #1f4720;
-  transform: scale(1.08);
-}
+        .chatbot-container {
+            padding: 50px 20px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            margin: 50px 0;
+            border-radius: 15px;
+            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+            animation: slideIn 1s ease-in-out;
+        }
 
-/* Enhanced Responsive Design */
-@media (max-width: 1024px) {
-  .hero-content h1 {
-    font-size: 2.5rem;
-  }
-  
-  .section-heading {
-    font-size: 2.2rem;
-  }
-}
+        .chatbot-container h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
 
-@media (max-width: 768px) {
-  .nav-list {
-    gap: 1.2rem;
-  }
-  
-  .hero-section {
-    height: 60vh;
-    margin-bottom: 2rem;
-  }
-  
-  .species-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  
-  #chatbot {
-    width: 90%;
-    right: 5%;
-    bottom: 15px;
-  }
-}
+        .chatbox {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-@media (max-width: 480px) {
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-  
-  .section-heading {
-    font-size: 1.8rem;
-  }
-  
-  #chatButton {
-    width: 55px;
-    height: 55px;
-    bottom: 20px;
-    right: 20px;
-  }
-}
+        #chat-messages {
+            width: 80%;
+            height: 200px;
+            background: #f1f1f1;
+            border-radius: 10px;
+            padding: 10px;
+            overflow-y: scroll;
+            margin-bottom: 15px;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #user-input {
+            padding: 10px;
+            width: 70%;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        #send-button {
+            padding: 10px 20px;
+            background: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        #send-button:hover {
+            background: #218838;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
