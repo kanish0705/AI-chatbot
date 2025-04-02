@@ -1,115 +1,95 @@
-/* 🌿 Global Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    background: url('images/background.jpg') no-repeat center center/cover;
-    color: #fff;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aquaponics Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-/* 🌱 Header */
-header {
-    background-color: rgba(0, 100, 0, 0.8);
-    padding: 20px;
-}
+    <!-- 🌿 Header Section -->
+    <header>
+        <h1>Aquaponics Guide</h1>
+    </header>
 
-header h1 {
-    margin: 0;
-}
+    <!-- 🌱 Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#guide">Guide</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-/* 🏡 Navigation */
-nav {
-    background: rgba(34, 139, 34, 0.9);
-    padding: 15px;
-}
+    <!-- 🏡 Home Section -->
+    <section id="home">
+        <h1>Welcome to the Future of Farming</h1>
+        <p>Discover how to grow plants and fish together in a sustainable way.</p>
+        <a href="#guide" class="button">Get Started</a>
+    </section>
 
-nav ul {
-    list-style: none;
-    padding: 0;
-}
+    <!-- 📖 Guide Section -->
+    <section id="guide">
+        <h2>Best Plants & Fish for Aquaponics</h2>
+        <div class="grid-container">
+            
+            <!-- Plants -->
+            <div class="grid-item">
+                <img src="images/lettuce.jpg" alt="Lettuce">
+                <h3>Lettuce</h3>
+                <p>A fast-growing leafy vegetable ideal for aquaponics.</p>
+            </div>
 
-nav ul li {
-    display: inline;
-    margin: 0 20px;
-}
+            <div class="grid-item">
+                <img src="images/basil.jpg" alt="Basil">
+                <h3>Basil</h3>
+                <p>An aromatic herb that thrives in aquaponics systems.</p>
+            </div>
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-}
+            <div class="grid-item">
+                <img src="images/tomato.jpg" alt="Tomato">
+                <h3>Tomatoes</h3>
+                <p>A popular fruiting plant for aquaponics setups.</p>
+            </div>
 
-/* 📖 Sections */
-section {
-    padding: 50px 10px;
-}
+            <!-- Fish -->
+            <div class="grid-item">
+                <img src="images/tilapia.jpg" alt="Tilapia">
+                <h3>Tilapia</h3>
+                <p>Aquaponics-friendly fish that grows quickly.</p>
+            </div>
 
-#home {
-    background: rgba(0, 100, 0, 0.7);
-    padding: 60px 20px;
-    border-radius: 10px;
-}
+            <div class="grid-item">
+                <img src="images/catfish.jpg" alt="Catfish">
+                <h3>Catfish</h3>
+                <p>A hardy fish that can tolerate various water conditions.</p>
+            </div>
 
-.button {
-    background: #32CD32;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: white;
-    border-radius: 5px;
-}
+            <div class="grid-item">
+                <img src="images/goldfish.jpg" alt="Goldfish">
+                <h3>Goldfish</h3>
+                <p>A low-maintenance fish for small systems.</p>
+            </div>
 
-/* 📦 Grid Layout */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    max-width: 1100px;
-    margin: 0 auto;
-}
+        </div>
+    </section>
 
-.grid-item {
-    background: rgba(0, 100, 0, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-}
+    <!-- 📞 Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: aquaponics@example.com</p>
+    </section>
 
-.grid-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
+    <!-- 🟢 Floating Chatbot Button -->
+    <div id="chatbot">
+        <img src="images/chatbot-icon.png" alt="Chatbot">
+    </div>
 
-/* 📞 Contact */
-#contact {
-    background: rgba(0, 100, 0, 0.8);
-}
+    <!-- 🌍 Footer -->
+    <footer>
+        <p>&copy; 2025 Aquaponics Guide. All rights reserved.</p>
+    </footer>
 
-/* 🟢 Floating Chatbot Button */
-#chatbot {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-}
-
-#chatbot img {
-    width: 50px;
-    height: 50px;
-}
-
-/* 🌍 Footer */
-footer {
-    background: rgba(34, 139, 34, 0.9);
-    padding: 10px;
-}
+</body>
+</html>
