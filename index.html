@@ -103,6 +103,12 @@
 
     <!-- 🟢 Floating Chatbot Button -->
     <button id="chatbot-btn">💬 Chat</button>
+    <div id="chatbox">
+        <h3>Chat with us</h3>
+        <input type="text" id="chat-input" placeholder="Type a message...">
+        <button onclick="sendMessage()">Send</button>
+        <div id="chat-messages"></div>
+    </div>
 
     <!-- 🌍 Footer -->
     <footer>
@@ -110,10 +116,25 @@
     </footer>
 
     <script>
+        function sendMessage() {
+            let input = document.getElementById("chat-input").value;
+            let chatMessages = document.getElementById("chat-messages");
+            let newMessage = document.createElement("p");
+            newMessage.textContent = "You: " + input;
+            chatMessages.appendChild(newMessage);
+            document.getElementById("chat-input").value = "";
+        }
+        
         document.getElementById("chatbot-btn").addEventListener("click", function() {
-            alert("Chatbot feature coming soon!");
+            let chatbox = document.getElementById("chatbox");
+            if (chatbox.style.display === "none") {
+                chatbox.style.display = "block";
+            } else {
+                chatbox.style.display = "none";
+            }
         });
     </script>
 
 </body>
 </html>
+
