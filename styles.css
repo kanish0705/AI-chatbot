@@ -33,9 +33,28 @@ nav ul li a {
     text-decoration: none;
 }
 
-/* 🖼 Image Styling */
+/* 🌱 Sections */
+section {
+    padding: 40px;
+    margin: 20px;
+    background: white;
+    border-radius: 10px;
+}
+
+/* 🖼 Image Grid */
+.grid-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.grid-item {
+    text-align: center;
+    margin: 20px;
+}
+
 .grid-item img {
-    width: 150px;
+    width: 180px; /* Small-Medium Size */
     height: auto;
     border-radius: 10px;
     display: block;
