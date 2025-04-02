@@ -43,7 +43,28 @@ section {
     border-radius: 10px;
 }
 
-/* 🟢 Floating Chatbot Button */
+/* 📸 Grid Container for Plants & Fish */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+    gap: 20px;
+    justify-content: center;
+}
+
+.grid-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.grid-item img {
+    width: 120px;  /* Reduced size */
+    height: auto;
+    border-radius: 10px;
+}
+
+/* 🟢 Floating Chatbot Button (Smaller) */
 #chatbot {
     position: fixed;
     bottom: 20px;
@@ -52,8 +73,8 @@ section {
 }
 
 #chatbot img {
-    width: 60px;
-    height: 60px;
+    width: 50px; /* Reduced size */
+    height: 50px;
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
