@@ -91,7 +91,7 @@ body {
 }
 
 /* Setup Guide Section */
-.setup-guide {
+#setup {
   max-width: 1280px;
   margin: 4rem auto;
   padding: 2rem;
