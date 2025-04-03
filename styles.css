@@ -145,6 +145,39 @@ body {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* Styling for the "How Aquaponics Works" section */
+#working {
+    width: 80%;
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#working h2 {
+    text-align: center;
+    color: #0277bd;
+}
+
+#working p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+#working ol {
+    background-color: #b3e5fc;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#working ol li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+
 /* Smooth Scrolling for Navigation */
 html {
   scroll-behavior: smooth;
